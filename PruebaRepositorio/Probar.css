@@ -33,6 +33,7 @@
 h1{
 	background-color: yellow;
 	font-size: 8px;
+	position: absolute;
 }
 h2{
 
