@@ -30,72 +30,7 @@
 :root { 
     display: block;
 }
-h1{
 
-}
-h2{
-
-}
-
-/* Utilizamos selectores de identificador para capas y secciones que serán únicas y
-les ponemos nombres estándar */
-
-/* Añadimos comentarios  explicativos, indicando para qué es ese estilo y lo relevante del mismo*/
-
-/* Estilo para la cabecera */
-#header {
-
-}
-
-/* Estilo para un menu - Indicamos su localizaciÃ³n real (por ejemplo, menú bajo cabecera) */
-#menu {
-
-}
-
-/* Estilo para barra lateral*/
-#sidebar {
-
-}
-
-/* Estilo para el footer */
-#footer {
-
-}
-
-/* Estilo para el contenido principal, también puedes llamarlo content */
-#main{
-
-}
-/* Utilizo selectores de clase para poder aplicar estilos a varios elementos o para elementos 
-que no son capas o secciones principales*/
-/* Agrupamos las reglas por selector */
-/* Definimos anidamientos siempre que sea necesario */
-#main table{
-
-}
-
-#main table.miembros{
-
-}
-
-#main table.empleados{
-
-}
-/* Si voy a tener tablas en otras capas y el estilo va a ser igual en todas no anidamos */
-
-/* Si el estilo de p fuese el mismo en todo el html lo definiriamos al principio del CSS*/
-#main p{
-
-}
-
-
-/* Igual que antes, primero reglas para etiquetas,luego para clases*/
-#main .introduccion{
-
-}
-
-/* Al final los selectores de clases */
-
-.clase1{
-	
+body {
+	background-color: yellow;
 }
