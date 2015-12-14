@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+Autor = Ruben Rodriguez Fernandez
+Fecha = 9 de dic. de 2015
+Licencia = GPL 30
+Version = 1.0
+Descripcion = Formulario de contacto de la Página web de White Wolf Wrestling
+-->
+
+<!--
+  Copyright (C) 2015 Ruben Rodriguez Fernandez
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Formulario</title>
+
+<!-- Se incluye el JavaScript externo -->
+<script src="Formulario.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+	<form id="form_cv" method="post" onsubmit="return validar()"
+		action="Gracias.html">
+		<hr>
+		<table>
+			<tr>
+				<td>Nombre*: <input type="text" id="nombre"
+					pattern="^[A-Z a-z]+$" placeholder="Nombre"
+					title="Debe ser un nombre formado por letras mayusculas y minúsculas y/o espacios"
+					oninvalid="this.value=''" oninput="valEnvio()" required><br>
+				</td>
+			</tr>
+			<tr>
+				<td>Apellido 1*: <input type="text" id="apellido1"
+					pattern="^[A-Za-z]+$" placeholder="Apellido1"
+					title="Debe ser un nombre formado por letras mayusculas y minúsculas sin espacios"
+					oninvalid="this.value=''" oninput="valEnvio()" required><br>
+
+				</td>
+			</tr>
+			<tr>
+				<td>Apellido 2*: <input type="text" id="apellido2"
+					pattern="^[A-Za-z]+$" placeholder="Apellido2"
+					title="Debe ser un nombre formado por letras mayusculas y minúsculas sin espacios"
+					oninvalid="this.value=''" oninput="valEnvio()" required><br>
+
+				</td>
+			</tr>
+			<tr>
+				<td>Email*: <input type="email" id="email"
+					placeholder="ejemplo@ejemplo.com"
+					title="La dirección de correo debe ser del tipo ejemplo@ejemplo.com"
+					oninvalid="this.value=''" oninput="valEnvio()" required><br>
+
+				</td>
+			</tr>
+			<tr>
+				<td>Telefono Fijo: <input type="tel" id="telFijo"
+					pattern="^[9]{1}\d{8}$" placeholder="900000000"
+					title="El número de telefono fijo debe empezar por 9 y componerse de 9 dígitos"
+					oninvalid="this.value=''" oninput="valEnvio()"><br>
+
+				</td>
+			</tr>
+			<tr>
+				<td>Telefono Móvil*: <input type="tel" id="telMovil"
+					pattern="^[6]{1}\d{8}$" placeholder="600000000"
+					title="El número de telefono móvil debe empezar por 6 y componerse de 9 dígitos"
+					oninvalid="this.value=''" oninput="valEnvio()" required><br>
+
+				</td>
+			</tr>
+			<tr>
+				<td>Descripción:<br> <textarea id="descripcion" cols="50"
+						rows="5" required
+						placeholder="Por favor, describa brevemente el motivo de su interés en nuestra asociación"
+						title="Por favor, rellene este campo"></textarea><br>
+
+				</td>
+			</tr>
+			<tr>
+				<td>Asunto* <select id="asunto" required onchange="valEnvio()">
+						<option value='' selected>--Seleccione un Asunto--</option>
+						<option value='Informacion'>Información</option>
+						<option value='Contratacion'>Contratación</option>
+						<option value='Suscripcion'>Suscripción</option>
+						<option value='Otros'>Otros...</option>
+				</select>
+
+				</td>
+			</tr>
+			<tr>
+				<td align='left'>Acepto Términos y Condiciones de uso*: <input
+					type="checkbox" id="terminos" onchange="changeTerminos()"
+					disabled="disabled"><br>
+
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: center"><input type='submit' id="envio"
+					value="Enviar" disabled="disabled">
+			</tr>
+		</table>
+
+	</form>
+	<hr>
+
+</body>
+</html>
