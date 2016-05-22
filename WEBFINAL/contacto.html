@@ -173,19 +173,20 @@
                         <div class="col-sm-6 col-xs-12 contact-right">
                             <div class="adress">
                                 <ul>
-                                    <li>Moscow</li>
-                                    <li>Russia</li>
-                                    <li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> +222 333 000</li>
+                                    <li>Madrid</li>
+                                    <li>España</li>
+                                    <li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> +91 000 00 00</li>
                         
                                 </ul>
                                  <div class="clearfix"></div>
                             </div>
                             <div class="form-details">
                                 <form>
-                                <input type="text" class="name-con" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}"><br>
-                                <input type="text" class="email-con" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"><br>
-                                <textarea class="contact-area" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea><br>
-                                    <a class="btn btn-default work-btn" href="#" role="button">Enviar</a>    
+                                <input type="text" id="nameCont" class="name-con" placeholder="Name"><br>
+                                <input type="text" id="emailCont" class="email-con" placeholder="Email"><br>
+                                <textarea class="contact-area"  id="messageCont" placeholder="Message"></textarea><br>
+								<div id="mensajeContacto"></div>
+                                    <a class="btn btn-default work-btn" href="#" role="button" id="enviarContacto" disabled="disabled">Enviar</a>
                                 </form>
                             </div>
                         </div>

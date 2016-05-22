@@ -86,7 +86,7 @@
 							</h1>
 
 						</div>
-						<div class=" col-xs-6 col-md-2">
+						<div class=" col-xs-6 col-md-2" id="registerLogin">
 							<div class="dropdown-grids">
 								<div id="loginContainer">
 									<a id="loginButton"><span>Login</span></a>
@@ -103,6 +103,7 @@
 															<label for="password">Password</label> <input
 																name="password" id="password" type="password">
 														</fieldset>
+														<div id="errorLogin" style="color: red;"></div>
 														<input id="login" value="Sign in" type="button"> <label
 															for="checkbox"><input id="checkbox"
 															type="checkbox"> <i>Remember me</i></label>
@@ -320,7 +321,7 @@
 				</div>
 				<div class="col-sm-12 col-xs-12 reg">
 					<center>
-					<input type="submit" id="registrar" name="registro" id="registro" value="Registrar">
+					<input type="submit" id="registrar" name="registro" id="registro" value="Registrar" disabled="disabled">
 					</center>
 				</div>
             </form>

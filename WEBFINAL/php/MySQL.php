@@ -27,7 +27,7 @@
 class MySQL {
 
     const DB_DSN = "mysql:host=localhost"; // Nombre de host MYSQL
-    const DB = "pruebas"; // Nombre de LA BASE DE DATOS
+    const DB = "handsmade"; // Nombre de LA BASE DE DATOS
     const USUARIO = "homestead"; // Nombre de usuario de MySQL
     const PASSWORD = "secret"; // Contraseña de usuario de MySQL
     const TABLA = "clientes"; // Nombre de la tabla

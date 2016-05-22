@@ -1,0 +1,43 @@
+CREATE DATABASE handsmade;
+
+USE handsmade;
+
+CREATE TABLE clientes (
+id_user INT NOT NULL AUTO_INCREMENT,
+login varchar(45) NOT NULL,
+pass varchar(45) NOT NULL,
+dni char(9) NOT NULL,
+nombre CHAR(25) NOT NULL,
+apellidos CHAR(45) NOT NULL,
+email CHAR(30) NOT NULL,
+direccion varchar(100) NOT NULL,
+telefono1 INT (9)NOT NULL,
+telefono2 INT(9),
+PRIMARY KEY (id_user, login)
+)DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+CREATE TABLE productos (
+id_prod INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nombre_prod varchar(45) NOT NULL,
+categoria_prod varchar(45) NOT NULL,
+material_prod varchar(45) NOT NULL,
+precio_prod DEC(6,2) NOT NULL
+)DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+INSERT INTO productos (nombre_prod, categoria_prod, material_prod, precio_prod) VALUES (
+'bolso bonito', 'bolso', 'cuero', 19.99);
+
+CREATE TABLE pedidos (
+id_pedido INT(3) NOT NULL PRIMARY KEY,
+id_user INT(3) NOT NULL,
+FOREIGN KEY (id_user) REFERENCES clientes(id_user)
+)DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+CREATE TABLE facturas (
+id_pedido INT(3) NOT NULL,
+id_prod INT(3) NOT NULL,
+cantidad INT(3) NOT NULL,
+PRIMARY KEY (id_pedido, id_prod),
+FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido),
+FOREIGN KEY (id_prod) REFERENCES productos(id_prod)
+)DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;

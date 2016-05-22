@@ -24,44 +24,33 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
-//header('Content-type:application/json;charset=utf-8');
 require_once 'registro.php';
 
-Class Logearse {
+$mensaje ='';
+$respuesta = null;
 
-    public function logearse (){
+$registro = new Registro();
 
-        $mensaje ='';
-        $respuesta = null;
-
-        $registro = new Registro();
-
-        //Se recogen todos los valores del formulario
-        $login = $_POST['loginup'];
-        $password = $_POST['password'];
+//Se recogen todos los valores del formulario
+$login = $_POST['loginup'];
+$password = $_POST['password'];
 
 
-        $campos = array(
-            "login" => $login,
-            "pass" => $password,
-        );
-        if ($datos = $registro->load($mensaje, $campos, "clientes", "buscar")) {
-            //session_start();
-            //$_SESSION['login'] = $datos[0]['login'];
-            $objeto_json = new stdClass();
-            $objeto_json->mensaje="Correct";
-            $objeto_json->parametros=new stdClass();
-            $objeto_json->parametros->dni = $datos[0]['dni'];
-            //print_r($datos[0]['dni']);
-            //header("Location: ../signup.html?log=true;name=" . $_SESSION['login']);
-        } else {
-            //Error al introducir un login y password de usuario
-            $respuesta = "error";
-            //header('Location: Formulario.html?mensaje=Error2');
-        }
-        echo json_encode($objeto_json);
-    }
+$campos = array(
+    "login" => $login,
+    "pass" => $password,
+);
+if ($datos = $registro->load($mensaje, $campos, "clientes", "buscar")) {
+    session_start();
+    $_SESSION['login'] = 'ttttt';
+    $objeto_json = new stdClass();
+    $objeto_json->mensaje="Correct";
+    $objeto_json->parametros=new stdClass();
+    $objeto_json->parametros->dni = $datos[0]['dni'];
+    $objeto_json->parametros->nombre = $datos[0]['nombre'];
+} else {
+    //Error al introducir un login y password de usuario
+    $objeto_json = new stdClass();
+    $objeto_json->mensaje="Error";
 }
-$start = New Logearse();
-$start->logearse();
+echo json_encode($objeto_json);
