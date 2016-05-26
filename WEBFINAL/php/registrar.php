@@ -25,6 +25,8 @@
  */
 
 require_once 'registro.php';
+require_once 'login.php';
+require_once 'validacion.php';
 
 Class Registrar {
 
@@ -48,6 +50,22 @@ Class Registrar {
         }else{
             $telefono2="";
         }
+
+        //Se define el array de campos a introducir en la basa de datos
+        $campos = array(
+            "login" => $login,
+        );
+        if ($datos = $registro->load($mensaje, $campos, "clientes", "buscar")) {
+            if ($datos[0]){
+                //Error Usuario Existente
+                header('Location: ../signup.html?mensaje=errorUsuario');
+            }
+        } else {
+            //Error al introducir un nuevo usuario
+            header('Location: ../signup.html?mensaje=errorUsuario');
+        }
+        
+        $validar = new Validacion();
 
         //Se define el array de campos a introducir en la basa de datos
         $campos = array(

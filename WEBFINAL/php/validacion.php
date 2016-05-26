@@ -26,7 +26,14 @@
 
 class Validacion {
 
-    private $_camposObligatorios = array();
+    private $_camposObligatorios = array(["login", "login"],
+        ["nombre", "nombre"],
+        ["apellidos", "apellidos"],
+        ["dni", "dni"],
+        ["e-mail", "email"],
+        ["direccion", "direccion"],
+        ["telefono1", "telefono1"],
+        );
     private $_camposPendientes = array();
     private $_camposErroneos = array();
 

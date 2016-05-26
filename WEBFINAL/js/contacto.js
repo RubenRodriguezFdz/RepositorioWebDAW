@@ -27,33 +27,42 @@ var nameVal = false;
 var emailVal = false;
 var mensajeVal = false;
 
+$("#enviarContacto").click(function (){
+    if ($("#nameCont").val() == ""){
+        alert();
+    }
+});
+
+
 /**
  * valida : valida que todas las variables validación sean correctas.
  *          Evalua que todas las variables sean true.
  *          En caso correcto, se habilitará el botón de envio y se modificará el mensaje.
  *          En caso incorrecto, se inhabilitará el botón de envio y se modificará el mensaje.
- */
 function valida(){
     if (nameVal == false || emailVal == false || mensajeVal == false) {
-        $("#enviarContacto").attr("disabled", true);
-        $("#mensajeContacto").text('Rellene todos los campos obligatorios correctamente y pulse "Enviar"');
+        //$("#enviarContacto").attr("disabled", true);
+        //$("#mensajeContacto").html('Rellene todos los campos obligatorios correctamente y pulse "Enviar"');
     }else{
-        $("#enviarContacto").attr("disabled", false);
-        $("#mensajeContacto").text('Pulse "Enviar" para ponerse en contacto con nosotros');
+        alert();
+        //$("#enviarContacto").attr("disabled", false);
+        //$("#mensajeContacto").html('Pulse "Enviar" para ponerse en contacto con nosotros');
     }
-};
+}
 
 $("input#nameCont").on('input', function () {
-    if (!(/^[A-Z a-z áÁéÉíÍóÓúÚñÑ]+$/.test($("input#nombre").val())) || $("input#nombre").val() == "") {
-        $("input#nameCont").html("<img src='images/icono_false.png' width='20px' height='20px'> Introduzca letras y/o espacios");
-        if ($("input#nombre").val() == ""){
-            $("#errorNombre").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
+    if (!(/^[A-Z a-z áÁéÉíÍóÓúÚñÑ]+$/.test($("input#nombreCont").val())) || $("input#nombreCont").val() == "") {
+        $("errorNombreCont").html("<img src='images/icono_false.png' width='20px' height='20px'> Introduzca letras y/o espacios");
+        if ($("input#nombreCont").val() == ""){
+            $("#errorNombreCont").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
         }
         nombreVal = false;
         valida();
     }else{
-        $("#errorNombre").html("<img src='images/icono_true.png' width='20px' height='20px'> Nombre Correcto");
+        $("#errorNombreCont").html("<img src='images/icono_true.png' width='20px' height='20px'> Nombre Correcto");
         nombreVal = true;
         valida();
     }
 });
+valida();
+ */

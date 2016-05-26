@@ -16,29 +16,7 @@ $(function(){//DOM Ready
     var direccionVal = false;
     var tel1Val = false;
     var tel2Val = true;
-
-    $.post("php/logActive.php", null, function (data){
-        console.log(data);
-    });
-
-    /**
-     * Registra el logeo. En caso de que la respuesta del servidor sea correcta, desaparecerá el botón de login
-     * y dará la bienvenida al usuario.
-     * En caso de que el servidor devuelva error, se avisará al usuario.
-     */
-    $("#login").click(function (){
-        $.post("php/logearse.php", "loginup=" + $("#loginup").val() + "&password=" + $("#password").val(), function (data) {
-           console.log(data);
-            var request = JSON.parse(data);
-            if (request.mensaje === "Correct"){
-                $("#registerLogin").html("Bienvenido " + request.parametros.nombre);
-                $("#errorLogin").html("");
-            }else{
-                $("#errorLogin").html('Error en el login');
-            }
-        })
-    });
-
+    
     /**
      * valida : valida que todas las variables validación sean correctas.
      *          Evalua que todas las variables sean true.
@@ -292,44 +270,4 @@ $(function(){//DOM Ready
             valida();
         }
     });
-
-    /**
-     * erroresPHP : extract the url of the insert image
-     *
-     * @param input {type} HTML Element
-     * @param field_name {type} string
-     * @param win {type} window Object
-     */
-    //Funcion que evalua los errores devueltos por el PHP
-    //En caso de que el PHP devuelva algun error, dicha funcion investigara el tipo de error.
-    //El PHP devuelve el error a traves de una variable definida en la url
-    function erroresPHP() {
-        //Se extrae la variable definida en la url
-        var paramstr = window.location.search.substr(1);
-        var paramarr = paramstr.split("&");
-        var params = {};
-        //Se extrae la variable pasado por  url
-        for (var i = 0; i < paramarr.length; i++) {
-            var tmparr = paramarr[i].split("=");
-            params[tmparr[0]] = tmparr[1];
-        }
-        //En caso de que la variable definida sea mensaje se accede al if.
-        //Se rellena el mensaje con el mensaje y se muestra
-        //En caso contrario se oculta el div mensaje
-        if (params['mensaje']) {
-            $("#mensajePHP").show();
-            //Dependiendo del tipo de error devuelto se mostrara un mensaje u otro
-            if (params['mensaje'] == "errorUsuario") {
-                //Error correspondiente a la introducción de datos del usuario.
-                $("#mensajePHP").html("Ha ocurrido un error en la introducción del usuario en la base de datos.");
-            }
-        } else {
-            //Se oculta el div mensaje
-            $("#mensajePHP").hide();
-        }
-
-    }
-
-    //Se llama por defecto a la funcion erroresPHP para que se ejecute
-    erroresPHP();
 });

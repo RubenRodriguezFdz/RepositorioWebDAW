@@ -25,6 +25,7 @@
  */
 
 require_once 'registro.php';
+require_once 'session.php';
 
 $mensaje ='';
 $respuesta = null;
@@ -41,8 +42,9 @@ $campos = array(
     "pass" => $password,
 );
 if ($datos = $registro->load($mensaje, $campos, "clientes", "buscar")) {
-    session_start();
-    $_SESSION['login'] = 'ttttt';
+    $ses = new Session();
+    $ses->startSession();
+    $_SESSION['login'] = $datos[0]['login'];
     $objeto_json = new stdClass();
     $objeto_json->mensaje="Correct";
     $objeto_json->parametros=new stdClass();

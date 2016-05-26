@@ -22,5 +22,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+session_start();
 
-echo $_SESSION["login"];
+$objeto_json = new stdClass();
+
+if (isset($_SESSION['on'])) {
+    $objeto_json->mensaje = $_SESSION['on'];
+    if ($_SESSION['on'])
+        $objeto_json->login = $_SESSION['login'];
+}
+
+echo json_encode($objeto_json);

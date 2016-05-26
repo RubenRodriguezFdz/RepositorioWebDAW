@@ -33,6 +33,7 @@
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 	<script type="text/javascript" src="js/registro.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 
     <style type="text/css">
         div.regist-rigth input{
@@ -69,93 +70,94 @@
 </head>
 <!--body-->
 <body>
-	<!-------------Header---------------->
+<!-------------Header---------------->
 
-	<div class="container">
-		<div class="row">
+<div class="container">
+	<div class="row">
 
-			<header>
-				<div class="logo col-xs-12 col-md-3">
-					<a href="index.html"> <img src="images/logo.jpg"
-						class="img-responsive">
-					</a>
-				</div>
-				<div class="todo col-xs-12 col-md-8">
+		<header>
+			<div class="logo col-xs-12 col-md-3">
+				<a href="index.html"> <img src="images/logo.jpg"
+										   class="img-responsive">
+				</a>
+			</div>
+			<div class="todo col-xs-12 col-md-8">
 
-					<div class="row">
-						<div class="nombreEmpresa col-xs-6 col-md-10">
-							<h1>
-								<a href="index.html"><span>Hands</span>Made</a>
-							</h1>
+				<div class="row">
+					<div class="nombreEmpresa col-xs-6 col-md-7">
+						<h1>
+							<a href="index.html"><span>Hands</span>Made</a>
+						</h1>
 
-						</div>
-						<div class=" col-xs-6 col-md-2">
-							<div class="dropdown-grids">
-								<div id="loginContainer">
-									<a id="loginButton"><span>Login</span></a>
-									<div style="display: none;" id="loginBox">
-										<form id="loginForm">
-											<div class="login-grids">
-												<div class="login-grid-left">
-													<fieldset id="body">
-														<fieldset>
-															<label for="email">Email Address</label> <input
-																name="email" id="email" type="text">
-														</fieldset>
-														<fieldset>
-															<label for="password">Password</label> <input
-																name="password" id="password" type="password">
-														</fieldset>
-														<input id="login" value="Sign in" type="submit" action="php/logearse.php"> <label
-															for="checkbox"><input id="checkbox"
-															type="checkbox"> <i>Remember me</i></label>
+					</div>
+					<div class=" col-xs-6 col-md-5" id="registerLogin">
+						<div class="dropdown-grids">
+							<div id="loginContainer">
+								<a id="loginButton"><span>Login</span></a>
+								<div style="display: none;" id="loginBox">
+									<form id="loginForm">
+										<div class="login-grids">
+											<div class="login-grid-left">
+												<fieldset id="body">
+													<fieldset>
+														<label for="loginup">Login</label> <input
+															name="loginup" id="loginup" type="text">
 													</fieldset>
-													<span><a href="#">Forgot your password?</a></span>
-													<div class="or-grid">
-														<p>OR</p>
+													<fieldset>
+														<label for="password">Password</label> <input
+															name="password" id="password" type="password">
+													</fieldset>
+													<div id="errorLogin" style="color: red;"></div>
+													<input id="login" value="Sign in" type="button" onclick="openSession()"> <label
+														for="checkbox"><input id="checkbox"
+																			  type="checkbox"> <i>Remember me</i></label>
+												</fieldset>
+												<span><a href="#">Forgot your password?</a></span>
+												<div class="or-grid">
+													<p>OR</p>
+												</div>
+												<div class="social-sits">
+													<div class="facebook-button">
+														<a href="#">Connect with Facebook</a>
 													</div>
-													<div class="social-sits">
-														<div class="facebook-button">
-															<a href="#">Connect with Facebook</a>
-														</div>
-														<div class="chrome-button">
-															<a href="#">Connect with Google</a>
-														</div>
-														<div class="button-bottom">
-															<p>
-																New account? <a href="signup.html">Signup</a>
-															</p>
-														</div>
+													<div class="chrome-button">
+														<a href="#">Connect with Google</a>
+													</div>
+													<div class="button-bottom">
+														<p>
+															New account? <a href="signup.html">Signup</a>
+														</p>
 													</div>
 												</div>
 											</div>
-										</form>
-									</div>
+										</div>
+									</form>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="search col-xs-12 col-md-11">
+				</div>
+				<div class="row">
+					<div class="search col-xs-12 col-md-11">
 
-							<form method="post" action="search.html">
-								<input type="text" name="query" id="query" placeholder="Search…"
-									autocomplete="off" value="">
-							</form>
-						</div>
-						<div class="mini-cart col-xs-7 col-md-1">
-							<!-- Mini cart -->
-							<a href="cart.html" title="Go to cart →"> <span>3</span>
-							</a>
-							<!-- End class="mini-cart" -->
-						</div>
+						<form method="post" action="search.html">
+							<input type="text" name="query" id="query" placeholder="Search…"
+								   autocomplete="off" value="">
+						</form>
+					</div>
+					<div class="mini-cart col-xs-7 col-md-1">
+						<!-- Mini cart -->
+						<a href="cart.html" title="Go to cart →"> <span>3</span>
+						</a>
+						<!-- End class="mini-cart" -->
 					</div>
 				</div>
-			</header>
-		</div>
+			</div>
+		</header>
 	</div>
+</div>
 
-	<!----------Fin header--------------->
+<!----------Fin header--------------->
 
 	<!-----------Menu de navegacion------------->
 	
