@@ -1,3 +1,86 @@
+/*link ala traduccion de la pagina*/
+.traslate{
+	text-align: right;
+	
+}
+
+ a{
+	color:#000;
+}
+.logo{
+	z-index: 1;
+}
+/*Animacion del logo*/
+.animated 
+{
+ -webkit-animation-duration: 1s;
+ animation-duration: 3s;
+ -webkit-animation-fill-mode: both;
+ animation-fill-mode: backwards;
+ }
+         
+@-webkit-keyframes hinge {
+ 0% {
+-webkit-transform: rotate(0);
+-webkit-transform-origin: top left; 
+-webkit-animation-timing-function: ease-in-out;
+}
+20%, 60% {
+ -webkit-transform: rotate(80deg); 
+ -webkit-transform-origin: top left; 
+-webkit-animation-timing-function: ease-in-out;
+}
+40% {
+-webkit-transform: rotate(60deg);
+-webkit-transform-origin: top left;
+-webkit-animation-timing-function: ease-in-out;
+}
+80% {
+-webkit-transform: rotate(60deg) translateY(0);
+ opacity: 1; 
+ -webkit-transform-origin: top left; 
+-webkit-animation-timing-function: ease-in-out;
+}
+100% {
+-webkit-transform: translateY(700px);
+ opacity: 0;
+}
+}
+      
+@keyframes hinge {
+0% { 
+ transform: rotate(0); 
+transform-origin: top left; 
+animation-timing-function: ease-in-out; 
+}
+20%, 60% { 
+transform: rotate(80deg); 
+transform-origin: top left; 
+ animation-timing-function: ease-in-out; 
+}
+40% { 
+transform: rotate(60deg); 
+transform-origin: top left; 
+animation-timing-function: ease-in-out;
+}
+ 80% { 
+transform: rotate(60deg) translateY(0); 
+opacity: 1; 
+transform-origin: top left; 
+animation-timing-function: ease-in-out; 
+}
+100% { 
+transform: translateY(700px); 
+opacity: 0; 
+}
+}
+         
+         .hinge {
+            -webkit-animation-name: hinge;
+            animation-name: hinge;
+         }
+/********Fin de la animacion del logo***********/
+
 /*quita linea de todos los enlaces al tener el foco o pasar por encima*/
 a:focus, a:hover {
     text-decoration: none;
@@ -27,7 +110,7 @@ body{
     border: none;
     padding: 0.6em 0;
     border-radius: 0;
-    background-color: #fff;
+    background-color: #5E3D0D;
 }
 
 /*para que el menu sea fijo*/
@@ -44,8 +127,13 @@ _header {
 }
 /*paddin del login y el buscador*/
 .todo{
-	padding-top: 100px;
+	_padding-top: 100px;
 	
+}
+
+.rowSearch, .rowTranslate{
+	padding-top: 10px;
+	padding-bottom: 30px;
 }
 
 /*margen derecho e izquierdo del menu de navegacion*/
@@ -69,7 +157,7 @@ ul.nav-max-wid>li>a{
     font-size: 23px;
     font-weight: 600;
     text-transform: capitalize;
-    color: #1a1a1a !important;
+    color: #fff !important;
 }
 /*--margen de la lista efecto del menu --*/
 ul#cl-effect-5 {
@@ -1433,8 +1521,10 @@ h2.hd{
 /*--responsive-ends-here--*/
 
 
-/*hecho por yesicaaaaaaaaaaaaaaaaaaaaa*/
-
+/*padding del nombre de la empresa*/
+.nombreEmpresa{
+	padding-top: 100px;
+}
 .nombreEmpresa h1 a span {
     color:  #C7AB84;
 }
@@ -1443,7 +1533,7 @@ h2.hd{
     color: #292929;
     padding: 0.2em 0;
     font-weight: 600;
-    font-size: 1em;
+    font-size: 1.3em;
 }
 /**************boton login************/
 * {
