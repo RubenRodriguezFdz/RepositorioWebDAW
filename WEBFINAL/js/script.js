@@ -38,52 +38,42 @@ function erroresPHP() {
     }
 }
 
+/**
+ * Evalua al cargar la pagina si el login esta activo.
+ * Si esta activo, oculta el login y da la bienvenida al usuario
+ */
 $.post("php/logActive.php", null, function (data) {
     console.log(data);
     var request = JSON.parse(data);
     if (request.mensaje){
-        $("#registerLogin").html("Bienvenido " + request.login + "<button onclick='closeSession'>Cerrar</button>");
+        $("#registerLogin").hide();
+        $("#logActive").html("Bienvenido " + request.login + "<button class='newButton' onclick='closeSession()'>Cerrar</button>");
     }
 });
 
 /**
- * Registra el logeo. En caso de que la respuesta del servidor sea correcta, desaparecerá el botón de login
- * y dará la bienvenida al usuario.
- * En caso de que el servidor devuelva error, se avisará al usuario.
+ *  closeSession: Cierra la sesion iniciada por el usuario. Oculta el mensaje de bienvenida y muestra 
+ *                de nuevo el boton de login
  */
 function closeSession () {
     $.post("php/closeSession.php", null, function () {
-            $("#registerLogin").html("<div class='dropdown-grids'><div id='loginContainer'>" +
-                "<a id='loginButton'>" +
-                "<span>Login</span></a><div style='display: none;' id='loginBox'>" +
-                "<form id='loginForm'><div class='login-grids'><div class='login-grid-left'>" +
-                "<fieldset id='body'><fieldset><label for='loginup'>Login</label>" +
-                "<input name='loginup' id='loginup' type='text'></fieldset><fieldset>" +
-                "<label for='password'>Password</label>" +
-                "<input name='password' id='password' type='password'></fieldset>" +
-                "<div id='errorLogin' style='color: red;'></div>" +
-                "<input id='login' value='Sign in' type='button' onclick='openSession()'>" +
-                "<label for='checkbox'><input id='checkbox' type='checkbox'><i>Remember me</i>" +
-                "</label></fieldset><span><a href=''#'>Forgot your password?</a></span>" +
-                "<div class='or-grid'><p>OR</p></div><div class='social-sits'>" +
-                "<div class='facebook-button'><a href='#'>Connect with Facebook</a></div>" +
-                "<div class='chrome-button'><a href='#'>Connect with Google</a></div>" +
-                "<div class='button-bottom'><p> New account? <a href='signup.html'>Signup</a>" +
-                "</p></div></div></div></div></form></div></div></div></div>");
+        $("#registerLogin").show();
+        $("#logActive").html("");
         });
     }
 
 /**
- * Registra el logeo. En caso de que la respuesta del servidor sea correcta, desaparecerá el botón de login
- * y dará la bienvenida al usuario.
- * En caso de que el servidor devuelva error, se avisará al usuario.
+ * openSession: Registra el logeo. En caso de que la respuesta del servidor sea correcta, desaparecerá el botón de login
+ *              y dará la bienvenida al usuario.
+ *              En caso de que el servidor devuelva error, se avisará al usuario.
  */
 function openSession () {
     $.post("php/logearse.php", "loginup=" + $("#loginup").val() + "&password=" + $("#password").val(), function (data) {
         console.log(data);
         var request = JSON.parse(data);
         if (request.mensaje === "Correct"){
-            $("#registerLogin").html("Bienvenido " + request.parametros.nombre + "<button onclick='closeSession()'>Cerrar</button>");
+            $("#registerLogin").hide();
+            $("#logActive").html("Bienvenido " + request.parametros.nombre + "<button class='newButton' onclick='closeSession()'>Cerrar</button>");
             $("#errorLogin").html("");
         }else{
             $("#errorLogin").html('Error en el login');

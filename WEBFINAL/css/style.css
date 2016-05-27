@@ -63,7 +63,7 @@ _header {
     font-family: 'Hind Vadodara';
     padding: 12px 15px;
 }
-/*tamaño,grosor color y fuente del menu de navegacion */
+/*tamaï¿½o,grosor color y fuente del menu de navegacion */
 ul.nav-max-wid>li>a{
     font-family: 'Hind Vadodara';
     font-size: 23px;
@@ -121,7 +121,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     bottom: 23%;
     padding: 60px;
 }
-/*color, tamaño tipo de fuente del carousel*/
+/*color, tamaï¿½o tipo de fuente del carousel*/
 .carousel-caption h3 {
     font-family: 'Raleway';
     font-size: 19px;
@@ -1705,7 +1705,42 @@ ul, label {
     border-radius: 12px;
     background-clip: padding-box;
 }
-/*orde redondeado de los botones*/
+/*borde redondeado de los botones*/
 .btn{
 	border-radius: 0px; 
+}
+/* Style to new buttons */
+.newButton{
+    position: relative;
+    padding: 0.5em 0em;
+    border: solid 1px #C7AB84;
+    background: #C7AB84;
+    color: white;
+    width: 120px;
+    height: 35px;
+    margin-left: 10%;
+}
+div.regist-rigth input{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#registrar{
+    background: #C7AB84;
+    color: #fff;
+    font-size: 1em;
+    padding: 5px 20px;
+    border: 1px solid #C7AB84;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+}
+div.reg{
+    padding-top: 2em;
+}
+div#regMen{
+    text-align: center;
+}
+div#menPrin, div#mensajePHP{
+    text-align: center;
 }

@@ -34,34 +34,6 @@
 	<script type="text/javascript" src="js/easing.js"></script>
 	<script type="text/javascript" src="js/registro.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-
-    <style type="text/css">
-        div.regist-rigth input{
-            margin-top: 1em;
-            margin-bottom: 1em;
-        }
-        #registrar{
-			background: #C7AB84;
-			color: #fff;
-			font-size: 1em;
-			padding: 5px 20px;
-			border: 1px solid #C7AB84;
-			transition: all .5s;
-			-webkit-transition: all .5s;
-			-moz-transition: all .5s;
-			-o-transition: all .5s;
-        }
-		div.reg{
-			padding-top: 2em;
-		}
-		div#regMen{
-			text-align: center;
-		}
-        div#menPrin, div#mensajePHP{
-            text-align: center;
-        }
-    </style>
-
 </head>
 <!--body-->
 <body>
@@ -133,6 +105,7 @@
 								</div>
 							</div>
 						</div>
+						<div id="logActive"></div>
 					</div>
 					<div class="row">
 						<div class="search col-xs-12 col-md-11">
@@ -205,7 +178,6 @@
 
 				<!-- Mensaje de aviso de errores devueltos por el servidor -->
 				<div id="mensajePHP"  class="col-sm-12 col-xs-12">
-					Los campos obligatorios estan marcados con el simbolo *
 				</div>
 
                 <!-- Mensaje de aviso de campos obligatorios -->

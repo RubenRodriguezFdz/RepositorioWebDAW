@@ -27,42 +27,82 @@ var nameVal = false;
 var emailVal = false;
 var mensajeVal = false;
 
-$("#enviarContacto").click(function (){
-    if ($("#nameCont").val() == ""){
-        alert();
+/**
+ * validaNombre: valida la introdución de un nombre correcto en el formulario
+ *              Comprueba que la cadena introducida son letras con o sin espacios
+ *              En caso contrario settea la variable de validacion
+ *              Si todo es correcto settea la variable a true
+ */
+function validaNombre () {
+    var name = $("input#nameCont").val();
+    if (!(/^[A-Z a-z áÁéÉíÍóÓúÚñÑ]+$/.test(name)) || name == "") {
+        nameVal = false;
+        $("input#nameCont").val("");
+    }else{
+        nameVal = true;
     }
-});
+}
 
+/**
+ * validaEmail: valida la introdución de un email correcto en el formulario
+ *              Comprueba que la cadena introducida se trata de un email
+ *              En caso contrario settea la variable de validacion a false
+ *              Si todo es correcto settea la variable a true
+ */
+function validaEmail () {
+    var email = $("input#emailCont").val();
+    if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(email)) || email == "") {
+        emailVal = false;
+        $("input#emailCont").val("");
+    }else{
+        emailVal = true;
+    }
+}
+
+/**
+ * validaMensaje: valida la introdución de un mensaje
+ *              Comprueba que se ha rellenado el mensaje
+ *              En caso contrario settea la variable de validacion
+ *              Si todo es correcto settea la variable a true
+ */
+function validaMensaje () {
+    var mens = $("#messageCont").val();
+    if (mens == "") {
+        mensajeVal = false;
+        $("input#messageCont").val("");
+    }else{
+        mensajeVal = true;
+    }
+}
 
 /**
  * valida : valida que todas las variables validación sean correctas.
  *          Evalua que todas las variables sean true.
- *          En caso correcto, se habilitará el botón de envio y se modificará el mensaje.
- *          En caso incorrecto, se inhabilitará el botón de envio y se modificará el mensaje.
-function valida(){
-    if (nameVal == false || emailVal == false || mensajeVal == false) {
-        //$("#enviarContacto").attr("disabled", true);
-        //$("#mensajeContacto").html('Rellene todos los campos obligatorios correctamente y pulse "Enviar"');
+ *          En caso correcto, se enviara la consulta, se avisará al usuario, y se borraran todos los campos
+ *          En caso incorrecto, se avisará al usuario del error producido
+ */
+function valida () {
+    validaNombre();
+    validaEmail();
+    validaMensaje();
+    if (nameVal === true && emailVal === true && mensajeVal === true){
+        alert("Su consulta ha sido realizada. Gracias por su tiempo");
+        $("input#nameCont").val("");
+        $("input#emailCont").val("");
+        $("#messageCont").val("");
+        $("#mensajeContacto").html('Rellene todos los campos obligatorios correctamente y pulse "Enviar"');
     }else{
-        alert();
-        //$("#enviarContacto").attr("disabled", false);
-        //$("#mensajeContacto").html('Pulse "Enviar" para ponerse en contacto con nosotros');
+        var mensaje = 'Errores en el formulario de contacto:<br>';
+        $("#mensajeContacto").html('Errores en el formulario de contacto:<br>');
+        if (nameVal === false){
+            mensaje += 'Error en el nombre: Introduzca letras con o sin espacios<br>';
+        }
+        if (emailVal === false){
+            mensaje += 'Error en el email: Introduzca un email correcto. Ej: ejemplo@ejemplo.com<br>';
+        }
+        if (mensajeVal === false){
+            mensaje += 'Error en el mensage. Introduzca su consulta<br>';
+        }
+        $("#mensajeContacto").html(mensaje);
     }
 }
-
-$("input#nameCont").on('input', function () {
-    if (!(/^[A-Z a-z áÁéÉíÍóÓúÚñÑ]+$/.test($("input#nombreCont").val())) || $("input#nombreCont").val() == "") {
-        $("errorNombreCont").html("<img src='images/icono_false.png' width='20px' height='20px'> Introduzca letras y/o espacios");
-        if ($("input#nombreCont").val() == ""){
-            $("#errorNombreCont").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
-        }
-        nombreVal = false;
-        valida();
-    }else{
-        $("#errorNombreCont").html("<img src='images/icono_true.png' width='20px' height='20px'> Nombre Correcto");
-        nombreVal = true;
-        valida();
-    }
-});
-valida();
- */
