@@ -5,7 +5,7 @@
  * Fecha= 29-ene-2016
  * Licencia= gpl30
  * Version= Expression version is undefined on line 6, column 14 in Templates/Scripting/EmptyPHP.php.
- * Descripcion=
+ * Descripcion= gestiona la variable global $_SESSION
  * */
 /*
  * Copyright (C) 2016 Ruben
@@ -27,7 +27,7 @@
 /**
  * Class Session
  *
- * Clase que gestiona la variable suplerglobal $_SESSION
+ * Clase que gestiona la variable global $_SESSION
  */
 class Session {
 

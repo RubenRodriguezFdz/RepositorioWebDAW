@@ -1,12 +1,12 @@
 /**
  * Autor= Ruben Rodríguez Fernández
- * Fecha= 12/05/16
+ * Fecha= 15-Abr-2016
  * Licencia= gpl30
  * Version= 1.0
- * Descripcion=
+ * Descripcion= Javascript del contacto
  * */
 /*
- * Copyright (C) 2016 Rubén Rodríguez Fernández
+ * Copyright (C) 2016 Ruben
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

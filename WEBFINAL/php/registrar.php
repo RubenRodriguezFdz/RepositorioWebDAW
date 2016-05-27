@@ -26,6 +26,7 @@
 
 require_once 'registro.php';
 require_once 'login.php';
+require_once 'session.php';
 
 Class Registrar {
 
@@ -103,6 +104,10 @@ Class Registrar {
             "telefono2" => $telefono2,
         );
         if ($registro->load($mensaje, $campos, "clientes", "guardar")) {
+            // Éxito en el insert. Se devuelve a la página Thanks
+            $ses = new Session();
+            $ses->startSession();
+            $_SESSION['login'] = $login;
             header('Location: ../thanksRegistro.html');
             exit;
         } else {

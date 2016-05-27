@@ -33,7 +33,7 @@ $respuesta = null;
 $registro = new Registro();
 
 //Se recogen todos los valores del formulario
-$login = $_POST['loginup'];
+$login = $_POST['log'];
 $password = $_POST['password'];
 
 
@@ -49,7 +49,7 @@ if ($datos = $registro->load($mensaje, $campos, "clientes", "buscar")) {
     $objeto_json->mensaje="Correct";
     $objeto_json->parametros=new stdClass();
     $objeto_json->parametros->dni = $datos[0]['dni'];
-    $objeto_json->parametros->nombre = $datos[0]['nombre'];
+    $objeto_json->parametros->login = $datos[0]['login'];
 } else {
     //Error al introducir un login y password de usuario
     $objeto_json = new stdClass();

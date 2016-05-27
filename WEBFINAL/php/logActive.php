@@ -4,7 +4,7 @@
  * Fecha= 12/05/16
  * Licencia= gpl30
  * Version= 1.0
- * Descripcion=
+ * Descripcion= Comprobación de sesion abierta de usuarios
  * */
 /*
  * Copyright (C) 2016 Rubén Rodríguez Fernández
