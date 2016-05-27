@@ -26,11 +26,20 @@ function erroresPHP() {
     //Se rellena el mensaje con el mensaje y se muestra
     //En caso contrario se oculta el div mensaje
     if (params['mensaje']) {
+        alert(params['mensaje']);
         $("#mensajePHP").show();
         //Dependiendo del tipo de error devuelto se mostrara un mensaje u otro
         if (params['mensaje'] == "errorUsuario") {
-            //Error correspondiente a la introducción de datos del usuario.
+            // Error correspondiente a la introducción de datos del usuario.
             $("#mensajePHP").html("Ha ocurrido un error en la introducción del usuario en la base de datos.");
+        }
+        if (params['mensaje'] == "usuarioExistente") {
+            // Usuario existente en la base de datos
+            $("#mensajePHP").html("El login ya se encuentra registrado. Elija otro diferente.");
+        }
+        if (params['mensaje'] == "campoErroneo") {
+            // Existe algun campo erroneo
+            $("#mensajePHP").html("Alguno de los campos introducidos es incorrecto. Rellene de nuevo el formulario.");
         }
     } else {
         //Se oculta el div mensaje

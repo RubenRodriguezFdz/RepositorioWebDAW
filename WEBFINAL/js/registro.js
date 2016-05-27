@@ -25,7 +25,7 @@ $(function(){//DOM Ready
      */
     function valida(){
        if (logVal == false || passVal == false || passConVal == false || nombreVal == false || apellidosVal == false || dniVal == false
-       || direccionVal == false || tel1Val == false || tel2Val == false) {
+       || emailVal == false || direccionVal == false || tel1Val == false || tel2Val == false) {
            $("#registrar").attr("disabled", true);
            $("#regMen").text('Rellene todos los campos obligatorios correctamente y pulse "Registrar"');
        }else{
@@ -129,7 +129,7 @@ $(function(){//DOM Ready
      * Si todo es correcto, avisa al usuario, settea la variable a true y accede a la funcion valida
      */
     $("input#nombre").on('input',function(){
-        if (!(/^[A-Z a-z áÁéÉíÍóÓúÚñÑ]+$/.test($("input#nombre").val())) || $("input#nombre").val() == "") {
+        if (!(/^[A-Za-záÁéÉíÍóÓúÚñÑ]{1}[A-Z a-z áÁéÉíÍóÓúÚñÑ]*$/.test($("input#nombre").val())) || $("input#nombre").val() == "") {
             $("#errorNombre").html("<img src='images/icono_false.png' width='20px' height='20px'> Introduzca letras y/o espacios");
             if ($("input#nombre").val() == ""){
                 $("#errorNombre").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
@@ -150,7 +150,7 @@ $(function(){//DOM Ready
      * Si todo es correcto, avisa al usuario, settea la variable a true y accede a la funcion valida
      */
     $("input#apellidos").on('input',function(){
-        if (!(/^[A-Z a-z áÁéÉíÍóÓúÚñÑ]+$/.test($("input#apellidos").val())) || $("input#apellidos").val() == "") {
+        if (!(/^[A-Za-záÁéÉíÍóÓúÚñÑ]{1}[A-Z a-z áÁéÉíÍóÓúÚñÑ]*$/.test($("input#apellidos").val())) || $("input#apellidos").val() == "") {
             $("#errorApe").html("<img src='images/icono_false.png' width='20px' height='20px'> Introduzca letras y/o espacios");
             if ($("input#apellidos").val() == ""){
                 $("#errorApe").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
