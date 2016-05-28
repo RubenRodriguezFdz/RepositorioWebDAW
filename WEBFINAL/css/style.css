@@ -1,9 +1,21 @@
-/*link ala traduccion de la pagina*/
-.traslate{
-	text-align: right;
-	
+/*padding del nombre de la empresa*/
+.nombreEmpresa{
+	padding-top: 100px;
+}
+.nombreEmpresa h1 a span {
+    color:  #C7AB84;
 }
 
+.nombreEmpresa h1 a {
+    color: #292929;
+    padding: 0.2em 0;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+	/*link ala traduccion de la pagina*/
+.traslate{
+	text-align: right;	
+}
  a{
 	color:#000;
 }
@@ -75,9 +87,10 @@ opacity: 0;
 }
 }
          
-         .hinge {
-            -webkit-animation-name: hinge;
-            animation-name: hinge;
+
+.hinge {
+ -webkit-animation-name: hinge;
+animation-name: hinge;
          }
 /********Fin de la animacion del logo***********/
 
@@ -1035,6 +1048,7 @@ h2.hd{
 }
 /*--responsive-starts-here--*/
 @media only screen and (max-width: 1024px){
+		
     .carousel-caption h3 {
         font-size: 18px;
     }
@@ -1282,13 +1296,20 @@ h2.hd{
     .navbar-brand {
         padding: 12px 0px 0px 25px;
     }
-}
+  }
 @media only screen and (max-width: 736px){
     .navbar-brand {
         padding: 12px 0px 0px 25px;
     }
 }
 @media only screen and (max-width: 480px){
+	 .nombreEmpresa h1 a {
+    font-size: 0.7em;
+}
+.nombreEmpresa {
+	padding-top: 15px;
+}
+
 	/*paraaque el menu hasta un max de 480 sea estatico*/
 	.navbar{
 	position: static;
@@ -1343,6 +1364,7 @@ h2.hd{
     }
 }
 @media only screen and (max-width: 414px){
+      
     .nav-min-wid{
         margin: 0 !important;
     }
@@ -1454,6 +1476,7 @@ h2.hd{
     }
 }
 @media only screen and (max-width: 320px){
+	 
     .carousel-caption {
         padding: 7px;
         bottom: 28%;
@@ -1521,20 +1544,6 @@ h2.hd{
 /*--responsive-ends-here--*/
 
 
-/*padding del nombre de la empresa*/
-.nombreEmpresa{
-	padding-top: 100px;
-}
-.nombreEmpresa h1 a span {
-    color:  #C7AB84;
-}
-
-.nombreEmpresa h1 a {
-    color: #292929;
-    padding: 0.2em 0;
-    font-weight: 600;
-    font-size: 1.3em;
-}
 /**************boton login************/
 * {
     -webkit-box-sizing: border-box;
