@@ -219,8 +219,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     background: rgba(106, 67, 28, 0.66);
     right: 23%;
     left: 23%;
-    bottom: 23%;
-    padding: 60px;
+    bottom: 17%;
+    padding: 35px;
 }
 /*color, tamaño tipo de fuente del carousel*/
 .carousel-caption h3 {
