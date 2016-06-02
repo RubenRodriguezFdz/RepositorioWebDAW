@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Autor= Rubén Rodríguez Fernández
+ * Autor= RubÃ©n RodrÃ­guez FernÃ¡ndez, Yesica Rojas
  * Fecha= 15-feb-2016
  * Licencia= gpl30
  * Version= 1.0
- * Descripcion= Validación de datos del lado del servidor
+ * Descripcion= ValidaciÃ³n de datos del lado del servidor
  * */
 /*
- * Copyright (C) 2016 Rubén Rodríguez Fernández
+ * Copyright (C) 2016 RubÃ©n RodrÃ­guez FernÃ¡ndez
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -83,7 +83,7 @@ class Validacion {
     }
 
     private function _esLetras($str) {
-        return preg_match("/^[a-zA-ZáéíúóÁÉÍÓÚÑñ ]{1,45}$/", $_POST[$str]);
+        return preg_match("/^[a-zA-ZÃ¡Ã©Ã­ÃºÃ³Ã�Ã‰Ã�Ã“ÃšÃ‘Ã± ]{1,45}$/", $_POST[$str]);
     }
 
     private function _esTelefono($tel) {        
