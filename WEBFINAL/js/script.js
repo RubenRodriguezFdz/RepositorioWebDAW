@@ -78,7 +78,7 @@ $.post("php/logActive.php", null, function (data) {
     var request = JSON.parse(data);
     if (request.mensaje){
         $("#registerLogin").hide();
-        $("#logActive").html("Bienvenido " + request.login + "<button class='newButton' onclick='closeSession()'>Cerrar</button>");
+        $("#logActive").html("Bienvenido " + request.login + "<a class='newButton btn btn-default work-btn' onclick='closeSession()'>Cerrar</a>");
     }
 });
 
@@ -104,7 +104,7 @@ function openSession () {
         var request = JSON.parse(data);
         if (request.mensaje === "Correct"){
             $("#registerLogin").hide();
-            $("#logActive").html("Bienvenido " + request.parametros.login + "<button class='newButton' onclick='closeSession()'>Cerrar</button>");
+            $("#logActive").html("Bienvenido " + request.parametros.login + "<a class='newButton btn btn-default work-btn' onclick='closeSession()'>Cerrar</a>");
             $("#errorLogin").html("");
         }else{
             $("#password").val("");
