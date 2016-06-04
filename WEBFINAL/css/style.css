@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*padding del nombre de la empresa*/
 .nombreEmpresa{
 	padding-top: 100px;
@@ -23,8 +22,6 @@
 .logo{
 	z-index: 1;
 }
-=======
->>>>>>> refs/remotes/RubenRodriguezFdz/master
 /*Animacion del logo*/
 .animated 
 {
@@ -89,25 +86,11 @@ transform: translateY(700px);
 opacity: 0; 
 }
 }
-         
-<<<<<<< HEAD
-
 .hinge {
  -webkit-animation-name: hinge;
 animation-name: hinge;
          }
 /********Fin de la animacion del logo***********/
-
-=======
-         .hinge {
-            -webkit-animation-name: hinge;
-            animation-name: hinge;
-         }
-/********Fin de la animacion del logo***********/
-
-
-
->>>>>>> refs/remotes/RubenRodriguezFdz/master
 /*quita linea de todos los enlaces al tener el foco o pasar por encima*/
 a:focus, a:hover {
     text-decoration: none;
@@ -178,7 +161,7 @@ _header {
     font-family: 'Hind Vadodara';
     padding: 12px 15px;
 }
-/*tamaño,grosor color y fuente del menu de navegacion */
+/*tamaï¿½o,grosor color y fuente del menu de navegacion */
 ul.nav-max-wid>li>a{
     font-family: 'Hind Vadodara';
     font-size: 23px;
@@ -236,7 +219,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     bottom: 17%;
     padding: 35px;
 }
-/*color, tamaño tipo de fuente del carousel*/
+/*color, tamaï¿½o tipo de fuente del carousel*/
 .carousel-caption h3 {
     font-family: 'Raleway';
     font-size: 19px;
@@ -1777,7 +1760,6 @@ ul, label {
     -webkit-box-shadow: inset 0 1px 2px rgba(71, 73, 72, 0.19999999999999996);
     -moz-box-shadow: inset 0 1px 2px rgba(71, 73, 72, 0.19999999999999996);
     box-shadow: inset 0 1px 2px rgba(71, 73, 72, 0.19999999999999996);
-} 
 }
 /*carrito de la compra*/
 .mini-cart {
