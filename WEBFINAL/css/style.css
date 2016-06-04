@@ -63,7 +63,7 @@ _header {
     font-family: 'Hind Vadodara';
     padding: 12px 15px;
 }
-/*tamaño,grosor color y fuente del menu de navegacion */
+/*tamaï¿½o,grosor color y fuente del menu de navegacion */
 ul.nav-max-wid>li>a{
     font-family: 'Hind Vadodara';
     font-size: 23px;
@@ -121,7 +121,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     bottom: 23%;
     padding: 60px;
 }
-/*color, tamaño tipo de fuente del carousel*/
+/*color, tamaï¿½o tipo de fuente del carousel*/
 .carousel-caption h3 {
     font-family: 'Raleway';
     font-size: 19px;
@@ -1665,7 +1665,7 @@ ul, label {
     -moz-box-shadow: inset 0 1px 2px rgba(71, 73, 72, 0.19999999999999996);
     box-shadow: inset 0 1px 2px rgba(71, 73, 72, 0.19999999999999996);
 } 
-}
+
 /*carrito de la compra*/
 .mini-cart {
 	padding: 17px 32px;
