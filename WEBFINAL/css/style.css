@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*padding del nombre de la empresa*/
 .nombreEmpresa{
 	padding-top: 100px;
@@ -22,6 +23,8 @@
 .logo{
 	z-index: 1;
 }
+=======
+>>>>>>> refs/remotes/RubenRodriguezFdz/master
 /*Animacion del logo*/
 .animated 
 {
@@ -87,6 +90,7 @@ opacity: 0;
 }
 }
          
+<<<<<<< HEAD
 
 .hinge {
  -webkit-animation-name: hinge;
@@ -94,6 +98,16 @@ animation-name: hinge;
          }
 /********Fin de la animacion del logo***********/
 
+=======
+         .hinge {
+            -webkit-animation-name: hinge;
+            animation-name: hinge;
+         }
+/********Fin de la animacion del logo***********/
+
+
+
+>>>>>>> refs/remotes/RubenRodriguezFdz/master
 /*quita linea de todos los enlaces al tener el foco o pasar por encima*/
 a:focus, a:hover {
     text-decoration: none;

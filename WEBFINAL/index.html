@@ -1,4 +1,27 @@
+<!--
+Autor= Yesica Rojas, Ruben Rodriguez, Nassim Bousaidi
+Fecha= 10.junio de 2016
+Licencia=  gp130
+Version= 1.0
+Descripcion= Página contacto que contiene el formulario
+-->
+<!--
+  Copyright (C) 2016 Yesica Rojas, Ruben Rodriguez, Nassim Bousaidi
 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,9 +50,13 @@
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 
+<!-- Facebook -->
+<script type="text/javascript" src="js/facebook.js"></script>
+
 </head>
 <!--body-->
 <body>
+
 	<!-------------Header---------------->
 
 	<div class="container">
@@ -37,7 +64,7 @@
 
 			<header>
 				<div class="logo col-xs-6 col-sm-6 col-md-3">
-					<a href="index.html"> <img src="images/logo (3).jpg"
+					<a href="index.html"> <img src="images/logo (3).png"
 						class="animated  hinge img-responsive ">
 					</a>
 				</div>
@@ -86,11 +113,9 @@
 													</div>
 													<div class="social-sits">
 														<div class="facebook-button">
-															<a href="#">Connect with Facebook</a>
+															<a id="loginFace" href="#">Connect with Facebook</a>
 														</div>
-														<div class="chrome-button">
-															<a href="#">Connect with Google</a>
-														</div>
+														
 														<div class="button-bottom">
 															<p>
 																New account? <a href="signup.html">Signup</a>
@@ -208,7 +233,7 @@
 		</section>
 		<div class="work-section">
 			<div class="container">
-				<div class="col-md-6 work-grids">
+				<div class="col-xs-12 col-sm-6 col-md-7 work-grids">
 					<div class="work-grid-text">
 						<ul>
 							<li><span class="glyphicon glyphicon-scissors work-grid-icn"
@@ -225,13 +250,13 @@
 							quis orci pharetra eleifend a eu diam. Morbi facilisis vitae quam
 							consectetur malesuada. Nullam a felis ut magna tincidunt luctus
 							eu sit amet tortor.</p>
-						<a class="btn btn-default work-btn" href="#" role="button">find
-							out more</a>
+						<a class="btn btn-default work-btn" href="#" role="button">Mas Informacion
+							</a>
 					</div>
 				</div>
-				<div class="col-md-6 work-grids">
-					<div class="work-img">
-						<img src="images/usb.png" alt="/" class="work-img-wid">
+				<div class="col-xs-12 col-sm-6 col-md-5">
+					<div class="embed-responsive embed-responsive-4by3">
+						<iframe  class="embed-responsive-item" src="https://www.youtube.com/embed/AxmApP2Q-qk"></iframe>
 					</div>
 				</div>
 
@@ -310,6 +335,19 @@
 			</a>
 		</div>
 		<!--Fin del footer-->
+		
+		<!-- facebook -->
+		<script>
+		// Load the SDK asynchronously
+		  (function(d, s, id) {
+		    var js, fjs = d.getElementsByTagName(s)[0];
+		    if (d.getElementById(id)) return;
+		    js = d.createElement(s); js.id = id;
+		    js.src = "//connect.facebook.net/en_US/sdk.js";
+		    fjs.parentNode.insertBefore(js, fjs);
+		  }(document, 'script', 'facebook-jssdk'));
+		</script>
+		<!-- facebook -->
 </body>
 <!--body-->
 </html>
