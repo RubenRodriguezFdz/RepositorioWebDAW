@@ -3,7 +3,7 @@ Autor= Yesica Rojas, Ruben Rodriguez, Nassim Bousaidi
 Fecha= 10.junio de 2016
 Licencia=  gp130
 Version= 1.0
-Descripcion= Página contacto que contiene el formulario
+Descripcion= PÃ¡gina contacto que contiene el formulario
 -->
 <!--
   Copyright (C) 2016 Yesica Rojas, Ruben Rodriguez, Nassim Bousaidi
@@ -28,7 +28,6 @@ Descripcion= Página contacto que contiene el formulario
 	background-color:  #C7AB84;
 	opacity:0.8;
 }
-
 /*padding del nombre de la empresa*/
 .nombreEmpresa{
 	padding-top: 100px;
@@ -36,7 +35,7 @@ Descripcion= Página contacto que contiene el formulario
 .nombreEmpresa h1 a span {
     color:  #C7AB84;
 }
-/*tamaño,color del link del nombre de la empresa*/
+/*tamaÃ±o,color del link del nombre de la empresa*/
 .nombreEmpresa h1 a {
     color: #292929;
     padding: 0.2em 0;
@@ -174,7 +173,6 @@ _header {
 	_padding-top: 100px;
 	
 }
-
 /*padding de las filas del buscador  y el translate*/
 .rowSearch, .rowTranslate{
 	padding-top: 10px;
@@ -1117,10 +1115,9 @@ h2.hd{
 }
 /*--responsive-starts-here--*/
 @media only screen and (max-width: 1024px){
-	
 	.carousel-caption {
     bottom: -11%; 
-}	
+}
     .carousel-caption h3 {
         font-size: 18px;
     }
@@ -1938,4 +1935,26 @@ div#menPrin, div#mensajePHP{
 div#thanks {
     font-size: 4em;
     text-align: center;
+}
+.margen{
+    margin-top: 50px;
+}
+.centrar {
+    margin: 0 auto;
+}
+.flotarD{
+    margin-left: 80%;
+}
+.flotarI{
+    margin-left: 15px;
+}
+
+.btn-default{
+    color:#333;
+    background-color:#fff;
+    border-color:#ccc
+}
+
+.anchura{
+    width: 70px;
 }

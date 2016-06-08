@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$db_name = "handsmade";
-$username = "root";
-$password = "";
+$db_name = "handsmade"; // Cambiar por las credenciales de cada base de datos
+$username = "homestead";
+$password = "secret";
  
 try {
     $con = new PDO("mysql:host={$host};dbname={$db_name}", $username, $password);

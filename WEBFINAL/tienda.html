@@ -24,232 +24,241 @@ Descripcion= Página contacto que contiene el formulario
 -->
 <!DOCTYPE html>
 <html>
-<head>
-    <title>HandsMade</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <script type="application/x-javascript">
+    <head>
+        <title>HandsMade</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script type="application/x-javascript">
 
-        addEventListener("load", function () {
+            addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
-        }, false);
-        function hideURLbar() {
+            }, false);
+            function hideURLbar() {
             window.scrollTo(0, 1);
-        }
+            }
 
-    </script>
+        </script>
 
-    <link rel="stylesheet" href="css/lightbox.css" type="text/css"
-          media="all"/>
-    <!--bootstrap-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <!--coustom css-->
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
-    <!--default-js-->
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <!--menu_jqueryLogin-js-->
-    <script src="js/menu_jqueryLogin.js"></script>
-    <!--bootstrap-js-->
-    <script src="js/bootstrap.min.js"></script>
-    <!--script-->
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/tienda.js"></script>
+        <link rel="stylesheet" href="css/lightbox.css" type="text/css"
+              media="all"/>
+        <!--bootstrap-->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <!--coustom css-->
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/botones.css" rel="stylesheet" type="text/css"/>
+        <!--default-js-->
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <!--menu_jqueryLogin-js-->
+        <script src="js/menu_jqueryLogin.js"></script>
+        <!--bootstrap-js-->
+        <script src="js/bootstrap.min.js"></script>
+        
+        <!--script-->
+        <script type="text/javascript" src="js/move-top.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/tienda.js"></script>
+        <script src="js/contador.js" type="text/javascript"></script>
 
-</head>
-<!--body-->
-<body>
-<!-------------Header---------------->
+    </head>
+    <!--body-->
+    <body>
+        <!-------------Header---------------->
 
-<div class="container">
-    <div class="row">
-        <header>
-            <div class="logo col-xs-6 col-sm-6 col-md-3">
-                <a href="index.html"> <img src="images/logo (3).png"
-                                           class="animated  hinge img-responsive ">
-                </a>
-            </div>
-            <div class="nombreEmpresa col-xs-6 col-sm-6 col-md-6">
-                <h1>
-                    <a href="index.html"><span>Hands</span>Made</a>
-                </h1>
-
-            </div>
-            <div class="todo col-xs-12 col-sm-12 col-md-3">
-                <div class="row rowTranslate">
-                </div>
-                <div class="row" id="registerLogin">
-                    <div class=" col-xs-12 col-sm-12 col-md-12">
-                        <div class="dropdown-grids">
-                            <div id="loginContainer">
-                                <a id="loginButton"><span>Login</span></a>
-                                <div style="display: none;" id="loginBox">
-                                    <form id="loginForm">
-                                        <div class="login-grids">
-                                            <div class="login-grid-left">
-                                                <fieldset id="body">
-                                                    <fieldset>
-                                                        <label for="loginup">Login</label> <input
-                                                            name="loginup" id="loginup" type="text">
-                                                    </fieldset>
-                                                    <fieldset>
-                                                        <label for="password">Password</label> <input
-                                                            name="password" id="password" type="password">
-                                                    </fieldset>
-                                                </fieldset>
-                                                <div id="errorLogin" style="color: red;"></div>
-                                                <input id="login" value="Sign in" type="button" onclick="openSession()">
-                                                <div class="or-grid">
-                                                    <p>OR</p>
-                                                </div>
-                                                <div class="social-sits">
-                                                    <div class="facebook-button">
-                                                        <a id="loginFace" href="#">Connect with Facebook</a>
-                                                    </div>
-
-                                                    <div class="button-bottom">
-                                                        <p>
-                                                            New account? <a href="signup.html">Signup</a>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="logActive" class="row"></div>
-                <div class="row rowSearch">
-                    <div class="search col-xs-9 col-sm-9 col-md-9">
-
-                        <form method="post" action="search.html">
-                            <input type="text" name="query" id="query" placeholder="Search…"
-                                   autocomplete="off" value="">
-                        </form>
-                    </div>
-                    <div class="mini-cart col-xs-col-sm-2 col-md-1">
-                        <!-- Mini cart -->
-                        <a href="cart.html" title="Go to cart →"> <span>3</span>
+        <div class="container">
+            <div class="row">
+                <header>
+                    <div class="logo col-xs-6 col-sm-6 col-md-3">
+                        <a href="index.html"> <img src="images/logo (3).png"
+                                                   class="animated  hinge img-responsive ">
                         </a>
-                        <!-- End class="mini-cart" -->
                     </div>
-                </div>
-            </div>
-        </header>
-    </div>
-</div>
+                    <div class="nombreEmpresa col-xs-6 col-sm-6 col-md-6">
+                        <h1>
+                            <a href="index.html"><span>Hands</span>Made</a>
+                        </h1>
 
-<!----------Fin header--------------->
-
-<!-----------Menu de navegacion------------->
-
-<nav class="navbar navbar-default nav-dflt-setin">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header nav-min-wid">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                    aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span> <span
-                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                    class="icon-bar"></span>
-            </button>
-            <h1>
-                <a class="navbar-brand" href="index.html"></a>
-            </h1>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse "
-             id="bs-example-navbar-collapse-1">
-
-            <ul class="nav navbar-nav nav-max-wid cl-effect-5" id="cl-effect-5">
-                <li><a href="index.html"><span data-hover="Inicio">Inicio</span></a></li>
-                <li><a href="tienda.html"><span data-hover="Tienda" class="active">Tienda</span></a></li>
-                <li><a href="galeria.html"><span data-hover="Galeria">Galeria</span></a></li>
-                <li><a href="nosotros.html"><span data-hover="Nosotros">Nosotros</span></a></li>
-                <li><a href="contacto.html"><span data-hover="Contacto">Contacto</span></a></li>
-                <li><a href="carrito.html"><span data-hover="Carrito">Carrito</span></a></li>
-            </ul>
-
-        </div>
-        <!-- /.navbar-collapse -->
-        <div class="clearfix"></div>
-    </div>
-    <!-- /.container-fluid -->
-</nav>
-
-<!--fin del menu de navegacion-->
-
-<!-- tienda -->
-    <div class="gallery-text">
-                        <h2>Tienda</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu erat lacus, vel congue mauris. Fusce velit justo, faucibus eu sagittis ac, gravida quis tortor.</p>
+                    </div>
+                    <div class="todo col-xs-12 col-sm-12 col-md-3">
+                        <div class="row rowTranslate">
                         </div>
-<div class="container">
+                        <div class="row" id="registerLogin">
+                            <div class=" col-xs-12 col-sm-12 col-md-12">
+                                <div class="dropdown-grids">
+                                    <div id="loginContainer">
+                                        <a id="loginButton"><span>Login</span></a>
+                                        <div style="display: none;" id="loginBox">
+                                            <form id="loginForm">
+                                                <div class="login-grids">
+                                                    <div class="login-grid-left">
+                                                        <fieldset id="body">
+                                                            <fieldset>
+                                                                <label for="loginup">Login</label> <input
+                                                                    name="loginup" id="loginup" type="text">
+                                                            </fieldset>
+                                                            <fieldset>
+                                                                <label for="password">Password</label> <input
+                                                                    name="password" id="password" type="password">
+                                                            </fieldset>
+                                                        </fieldset>
+                                                        <div id="errorLogin" style="color: red;"></div>
+                                                        <input id="login" value="Sign in" type="button" onclick="openSession()">
+                                                        <div class="or-grid">
+                                                            <p>OR</p>
+                                                        </div>
+                                                        <div class="social-sits">
+                                                            <div class="facebook-button">
+                                                                <a id="loginFace" href="#">Connect with Facebook</a>
+                                                            </div>
 
-        <div class="row">
-
-            <div class="col-md-3">
-                <p class="lead">HandsMade</p>
-                <div class="list-group">
-                    <a href="#" class="list-group-item" onclick="bolsos()">Bolsos</a>
-                    <a href="#" class="list-group-item" onclick="bisuteria()">Bisutería</a>
-                    <a href="#" class="list-group-item" onclick="accesorios()">Accesorios</a>
-                </div>
-            </div>
-
-            <div class="col-md-9"  id="accesorios">
-
-                <div class="row carousel-holder">
-
-                    <div class="col-md-12">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img class="slide-image" src="images/bolso1.jpg" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="images/bolso2.jpg" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="images/bolso3.jpg" alt="">
+                                                            <div class="button-bottom">
+                                                                <p>
+                                                                    New account? <a href="signup.html">Signup</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
+                        </div>
+                        <div id="logActive" class="row"></div>
+                        <div class="row rowSearch">
+                            <div class="search col-xs-9 col-sm-9 col-md-9">
+
+                                <form method="post" action="search.html">
+                                    <input type="text" name="query" id="query" placeholder="Search…"
+                                           autocomplete="off" value="">
+                                </form>
+                            </div>
+                            <div class="mini-cart col-xs-col-sm-2 col-md-1">
+                                <!-- Mini cart -->
+                                <a href="carrito.html" title="Go to cart →"> <span id="mini">3</span>
+                                </a>
+                                <!-- End class="mini-cart" -->
+                            </div>
                         </div>
                     </div>
+                </header>
+            </div>
+        </div>
+
+        <!----------Fin header--------------->
+
+        <!-----------Menu de navegacion------------->
+
+        <nav class="navbar navbar-default nav-dflt-setin">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header nav-min-wid">
+                    <button type="button" class="navbar-toggle collapsed"
+                            data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                            aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span> <span
+                            class="icon-bar"></span> <span class="icon-bar"></span> <span
+                            class="icon-bar"></span>
+                    </button>
+                    <h1>
+                        <a class="navbar-brand" href="index.html"></a>
+                    </h1>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse "
+                     id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav nav-max-wid cl-effect-5" id="cl-effect-5">
+                        <li><a href="index.html"><span data-hover="Inicio">Inicio</span></a></li>
+                        <li><a href="tienda.html"><span data-hover="Tienda" class="active">Tienda</span></a></li>
+                        <li><a href="galeria.html"><span data-hover="Galeria">Galeria</span></a></li>
+                        <li><a href="nosotros.html"><span data-hover="Nosotros">Nosotros</span></a></li>
+                        <li><a href="contacto.html"><span data-hover="Contacto">Contacto</span></a></li>
+                        <li><a href="carrito.html"><span data-hover="Carrito">Carrito</span></a></li>
+                    </ul>
 
                 </div>
+                <!-- /.navbar-collapse -->
+                <div class="clearfix"></div>
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
 
-                <div class="col-sm-4 col-lg-4 col-md-4">
+        <!--fin del menu de navegacion-->
+
+        <!-- tienda -->
+        <div class="gallery-text">
+            <h2>Tienda</h2>
+        </div>
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <p class="lead">HandsMade</p>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active" onclick="hogar(this)">Hogar</a>
+                        <a href="#" class="list-group-item" onclick="accesorios(this)">Accesorios</a>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-9 margen">
+
+                    <div class="row carousel-holder">
+
+                        <div class="col-md-12">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img class="slide-image" src="images/bolso1.jpg" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="slide-image" src="images/bolso2.jpg" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="slide-image" src="images/bolso3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-12 margen"  id="accesorios" style="display: none;">
+                    <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <img src="images/bolso4.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">19.50€</h4>
+                                <h4 class="pull-right">19.99€</h4>
                                 <h4><a href="#">Bolso Cuero</a>
                                 </h4>
                                 <p>Bolso de cuero realizado a mano y con todo el amor del mundo</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right"><input type="number" id="cantidad"/></p>
+                                <p class="pull-right">
+                                    <input type="number" id="1" size="1" class="input-sm" min="1" max="10" maxlength="5" value="1"/>
+                                </p>
                                 <p>
-                                <a href='php/add_to_cart.php?id=1&name=primero' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
+                                    <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
+<!--                                    <a href='#' class="btn btn-default work-btn" id="2" onclick="seleccionarProd(this)">
+                                        <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
+                                    </a>-->
                                 </p>
                             </div>
                         </div>
@@ -257,19 +266,19 @@ Descripcion= Página contacto que contiene el formulario
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="images/bolso5.png" alt="">
+                            <img src="images/accesorios1.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$64.99</h4>
-                                <h4><a href="#">Second Product</a>
+                                <h4 class="pull-right">9.99 €</h4>
+                                <h4><a href="#">Funda gafas</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>funda de gafas, hecha con cuero de maxima calidad y con un diseño contemporaneo.</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">12 reviews</p>
+                                <p class="pull-right">
+                                    <input type="number" id="2" size="1" class="input-sm" value="1"/>
+                                </p>
                                 <p>
-                                <a href='php/add_to_cart.php?id=2&name=segundo' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
+                                    <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
                                 </p>
                             </div>
                         </div>
@@ -277,244 +286,38 @@ Descripcion= Página contacto que contiene el formulario
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="images/bolso6.png" alt="">
+                            <img src="images/accesorios2.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$74.99</h4>
-                                <h4><a href="#">Third Product</a>
+                                <h4 class="pull-right">5.99 €</h4>
+                                <h4><a href="#">Pendientes Pandora</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Pendientes pandora, mejor complumento de su vestido.</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">31 reviews</p>
+                                <p class="pull-right">
+                                    <input type="number" id="3" class="input-sm" value="1"/></p>
                                 <p>
-                                <a href='php/add_to_cart.php?id=3&name=tercero' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
+                                    <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
                                 </p>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="images/bolso7.png" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$84.99</h4>
-                                <h4><a href="#">Fourth Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">6 reviews</p>
-                                <p>
-                                <a href='php/add_to_cart.php?id=4&name=cuarto' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="images/bolso8.png" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="#">Fifth Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">18 reviews</p>
-                                <p>
-                                <a href='php/add_to_cart.php?id=5&name=quinto' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="images/bolso8.png" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="#">Fifth Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">18 reviews</p>
-                                <p>
-                                <a href='php/add_to_cart.php?id=6&name=sexto' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$24.99</h4>
-                                <h4><a href="#">First Product</a>
-                                </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">15 reviews</p>
-                                <p>
-                                <a href='add_to_cart.php?id=6&name=Pendientes Bohemia' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$64.99</h4>
-                                <h4><a href="#">Second Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">12 reviews</p>
-                                <p>
-                                <a href='add_to_cart.php?id=6&name=Pendientes Bohemia' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$74.99</h4>
-                                <h4><a href="#">Third Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">31 reviews</p>
-                                <p>
-                                <a href='add_to_cart.php?id=6&name=Pendientes Bohemia' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$84.99</h4>
-                                <h4><a href="#">Fourth Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">6 reviews</p>
-                                <p>
-                                <a href='add_to_cart.php?id=6&name=Pendientes Bohemia' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="#">Fifth Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">18 reviews</p>
-                                <p>
-                                <a href='add_to_cart.php?id=6&name=Pendientes Bohemia' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Like this template?</a>
-                        </h4>
-                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                        <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="col-md-9"  id="hogar">
-
-                <div class="row carousel-holder">
-
-                    <div class="col-md-12">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img class="slide-image" src="images/bisu1.jpe" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="images/bisu2.jpg" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="images/bisu3.jpg" alt="">
-                                </div>
-                            </div>
-                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <img src="images/bisu4.png" alt="">
                             <div class="caption">
                                 <h4 class="pull-right">11.99€</h4>
-                                <h4><a href="#">Pendientes Bohemia</a>
+                                <h4><a href="#">Pendientes Dorados</a>
                                 </h4>
-                                <p>Pendientes de aro dorado con charms de estrellita y pluma. Diámetro del aro 3,5cm</p>
+                                <p>Pendientes dorados realizados en nuestro taller, buscando el maximo toque personal.</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">15 reviews</p>
+                                <p class="pull-right">
+                                    <input type="number" id="4" class="input-sm" value="1"/>
+                                </p>
                                 <p>
-                                <a href='add_to_cart.php?id=6&name=Pendientes Bohemia' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
+                                    <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
                                 </p>
                             </div>
                         </div>
@@ -524,37 +327,16 @@ Descripcion= Página contacto que contiene el formulario
                         <div class="thumbnail">
                             <img src="images/bisu5.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$64.99</h4>
-                                <h4><a href="#">Second Product</a>
+                                <h4 class="pull-right">25.00€</h4>
+                                <h4><a href="#">Pulsera reloj</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>pieza maestra de nuestras obras, nunca ha sido tan bonito llevar un reloj.</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">12 reviews</p>
+                                <p class="pull-right">
+                                    <input type="number" id="5" class="input-sm" value="1"/></p>
                                 <p>
-                                <a href='add_to_cart.php?id=6&name=Pendientes Bohemia' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="images/bisu6.png" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">$74.99</h4>
-                                <h4><a href="#">Third Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">31 reviews</p>
-                                <p>
-                                <a href='add_to_cart.php?id=6&name=Pendientes Bohemia' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
+                                    <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
                                 </p>
                             </div>
                         </div>
@@ -564,17 +346,17 @@ Descripcion= Página contacto que contiene el formulario
                         <div class="thumbnail">
                             <img src="images/bisu7.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$84.99</h4>
-                                <h4><a href="#">Fourth Product</a>
+                                <h4 class="pull-right">4.99€</h4>
+                                <h4><a href="#">Anillo cuero</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>La elegancia y el bien estar nunca tiene que ser caro.</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">6 reviews</p>
+                                <p class="pull-right">
+                                    <input type="number" id="6" class="input-sm" value="1"/>
+                                </p>
                                 <p>
-                                <a href='add_to_cart.php?id=6&name=Pendientes Bohemia' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
+                                    <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
                                 </p>
                             </div>
                         </div>
@@ -582,29 +364,248 @@ Descripcion= Página contacto que contiene el formulario
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="images/bisu8.png" alt="">
+                            <img src="images/accesorios3.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="#">Fifth Product</a>
+                                <h4 class="pull-right">9.99€</h4>
+                                <h4><a href="#">Cartera</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Cartera de cuero hecha para las necesidades diarias.</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">18 reviews</p>
+                                <p class="pull-right">
+                                    <input type="number" id="7" class="input-sm" value="1"/>
+                                </p>
                                 <p>
-                                <a href='add_to_cart.php?id=6&name=Pendientes Bohemia' class='btn btn-primary'>
-                                <span class='glyphicon glyphicon-shopping-cart'></span> Add to cart
-                                </a>
+                                    <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Like this template?</a>
-                        </h4>
-                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                        <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
+                        <div class="thumbnail">
+                            <img src="images/accesorios4.png" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">7.99€</h4>
+                                <h4><a href="#">Funda movil</a>
+                                </h4>
+                                <p>funda para proteger tu movil de cualquier peligro y a la vez dandole un toque bonito.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">
+                                    <input type="number" id="8" class="input-sm" value="1"/>
+                                </p>
+                                <p>
+                                    <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/accesorios5.png" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">19.99€</h4>
+                                <h4><a href="#">Juego Pendientes/Anillo</a>
+                                </h4>
+                                <p>Juego de pendientes y anillo que te sirven para cualquier ocasion.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">
+                                    <input type="number" id="9" class="input-sm" value="1"/>
+                                </p>
+                                <p>
+                                    <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/accesorios6.png" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">16.00€</h4>
+                                <h4><a href="#">Mochila</a>
+                                </h4>
+                                <p>mochila de tela, muy ligera y practica para llevar las cosas personales.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">
+                                    <input type="number" id="10" class="input-sm" value="1"/>
+                                </p>
+                                <p>
+                                    <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/accesorios7.png" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">9.99€</h4>
+                                <h4><a href="#">Fundas movil</a>
+                                </h4>
+                                <p>Colorea la vida del color que prefieras y de acuerdo a tu gusto.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">
+                                    <input type="number" id="11" class="input-sm" value="1"/>
+                                </p>
+                                <p>
+                                    <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!--</div>-->
+                <div class="col-md-12 margen"  id="hogar">
+                    <div class="row">
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="images/hogar1.png" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">19.50€</h4>
+                                    <h4><a href="#">Cuadro madera</a>
+                                    </h4>
+                                    <p>Dale un toque profesional y mas artistico a tu cuadros.</p>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">
+                                        <input type="number" id="12" size="1" class="input-sm" value="1"/>
+                                    </p>
+                                    <p>
+                                        <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="images/hogar2.png" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">3.99€</h4>
+                                    <h4><a href="#">Portavelas</a>
+                                    </h4>
+                                    <p>Portavelas navideño con aroma a canela, hecho con material reciclado.</p>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">
+                                        <input type="number" id="13" size="1" class="input-sm" value="1"/>
+                                    </p>
+                                    <p>
+                                        <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="images/hogar3.png" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">259.99€</h4>
+                                    <h4><a href="#">Decoración habitación</a>
+                                    </h4>
+                                    <p>Dale un toque mas tuyo a tu habitacion desde 259.99€.</p>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">
+                                        <input type="number" id="14" class="input-sm" value="1"/></p>
+                                    <p>
+                                        <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="images/hogar4.png" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">29.99€</h4>
+                                    <h4><a href="#">Perchero madera</a>
+                                    </h4>
+                                    <p>Perchero hecho con madera vintage, para darle un toque extra a la decoracion de tu casa.</p>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">
+                                        <input type="number" id="15" class="input-sm" value="1"/>
+                                    </p>
+                                    <p>
+                                        <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="images/hogar5.png" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">94.99€</h4>
+                                    <h4><a href="#">Estantería</a>
+                                    </h4>
+                                    <p>Estantería con un look minimalista, para aprovechar mejor el espacio.</p>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">
+                                        <input type="number" id="16" class="input-sm" value="1"/></p>
+                                    <p>
+                                        <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="images/hogar6.png" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">29.99€</h4>
+                                    <h4><a href="#">Juego botellas</a>
+                                    </h4>
+                                    <p>Juego de botellas para decorar su salon y llenar ese vacio de vista.</p>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">
+                                        <input type="number" id="17" class="input-sm" value="1"/>
+                                    </p>
+                                    <p>
+                                        <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="images/hogar7.png" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">24.99€</h4>
+                                    <h4><a href="#">Estantería panal</a>
+                                    </h4>
+                                    <p>Estantería facil, practica y relativamente barata, y sobre todo un objeto de decoración excelente.</p>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">
+                                        <input type="number" id="18" class="input-sm" value="1"/>
+                                    </p>
+                                    <p>
+                                        <input type="button" class="btn btn-default work-btn" value="Añadir al Carrito" onclick="seleccionarProd(this)"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -613,80 +614,77 @@ Descripcion= Página contacto que contiene el formulario
 
         </div>
 
-    </div>
+        <!--fin tienda-->
 
+        <!--footer-->
+        <div class="footer">
+            <div class="ft-top">
+                <div class="container">
+                    <div class="linksFooter col-xs-12 col-md-3">
+                        <ul>
+                            <li><a href="#" class="">Trabaja con nosotros</a></li>
+                            <li><a href="nosotros.html" class="">Nosotros</a></li>
+                            <li><a href="contacto.html" class="">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="linksFooter col-xs-12 col-md-3">
+                        <ul>
+                            <li><a href="signup.html" class="">Registro</a></li>
+                            <li><a href="politica.html" class="">Politica de privacidad</a></li>
+                            <li><a href="cookies.html" class="">Cookies</a></li>
+                        </ul>
+                    </div>
+                    <div class="aceptamos col-xs-12 col-md-3">
+                        <ul>
+                            <li><img
+                                    src="https://static.wixstatic.com/media/cda177_66112d8828944365b8a0fb3f95e423a0.png/v1/fill/w_32,h_20,al_c,usm_0.66_1.00_0.01/cda177_66112d8828944365b8a0fb3f95e423a0.png" /></li>
+                            <li><img
+                                    src="https://static.wixstatic.com/media/cda177_0292d75330eb4c46819ebd76e2b71edd.png/v1/fill/w_34,h_22,al_c,usm_0.66_1.00_0.01/cda177_0292d75330eb4c46819ebd76e2b71edd.png" /></li>
+                            <li><img
+                                    src="https://static.wixstatic.com/media/cda177_ae6aa613f4e049c697544cc8c8375ea2.png/v1/fill/w_33,h_21,al_c,usm_0.66_1.00_0.01/cda177_ae6aa613f4e049c697544cc8c8375ea2.png" /></li>
+                            <li><img
+                                    src="https://static.wixstatic.com/media/cda177_91a1dcd4c6d44674acf4a562b09838f6.png/v1/fill/w_35,h_22,al_c,usm_0.66_1.00_0.01/cda177_91a1dcd4c6d44674acf4a562b09838f6.png" /></li>
+                        </ul>
+                    </div>
+                    <div class="social-media col-xs-12 col-md-3">
+                        <ul>
+                            <li><a target="_blank" href="https://www.facebook.com/" class="ftfb"></a></li>
+                            <li><a target="_blank" href="https://twitter.com/" class="fttwt"></a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/" class="ftinst"></a></li>
+                            <li><a target="_blank" href="https://accounts.google.com/ServiceLogin?" class="ftdrib"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ft-bottom">
+                <div class="container">
+                    <p>RubenRodriguez | YesicaRojas | NassimBoussaidi</p>
+                </div>
+            </div>
 
-	<!--fin tienda-->
+            <!-- script para el triangulo que lleva al header -->
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    /*
+                     var defaults = {
+                     containerID: 'toTop', // fading element id
+                     containerHoverID: 'toTopHover', // fading element hover id
+                     scrollSpeed: 1200,
+                     easingType: 'linear'
+                     };
+                     */
 
-<!--footer-->
-<div class="footer">
-    <div class="ft-top">
-        <div class="container">
-            <div class="linksFooter col-xs-12 col-md-3">
-                <ul>
-                    <li><a href="#" class="">Trabaja con nosotros</a></li>
-                    <li><a href="nosotros.html" class="">Nosotros</a></li>
-                    <li><a href="contacto.html" class="">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="linksFooter col-xs-12 col-md-3">
-                <ul>
-                    <li><a href="signup.html" class="">Registro</a></li>
-                    <li><a href="politica.html" class="">Politica de privacidad</a></li>
-                    <li><a href="cookies.html" class="">Cookies</a></li>
-                </ul>
-            </div>
-            <div class="aceptamos col-xs-12 col-md-3">
-                <ul>
-                    <li><img
-                            src="https://static.wixstatic.com/media/cda177_66112d8828944365b8a0fb3f95e423a0.png/v1/fill/w_32,h_20,al_c,usm_0.66_1.00_0.01/cda177_66112d8828944365b8a0fb3f95e423a0.png" /></li>
-                    <li><img
-                            src="https://static.wixstatic.com/media/cda177_0292d75330eb4c46819ebd76e2b71edd.png/v1/fill/w_34,h_22,al_c,usm_0.66_1.00_0.01/cda177_0292d75330eb4c46819ebd76e2b71edd.png" /></li>
-                    <li><img
-                            src="https://static.wixstatic.com/media/cda177_ae6aa613f4e049c697544cc8c8375ea2.png/v1/fill/w_33,h_21,al_c,usm_0.66_1.00_0.01/cda177_ae6aa613f4e049c697544cc8c8375ea2.png" /></li>
-                    <li><img
-                            src="https://static.wixstatic.com/media/cda177_91a1dcd4c6d44674acf4a562b09838f6.png/v1/fill/w_35,h_22,al_c,usm_0.66_1.00_0.01/cda177_91a1dcd4c6d44674acf4a562b09838f6.png" /></li>
-                </ul>
-            </div>
-            <div class="social-media col-xs-12 col-md-3">
-                <ul>
-                    <li><a target="_blank" href="https://www.facebook.com/" class="ftfb"></a></li>
-                    <li><a target="_blank" href="https://twitter.com/" class="fttwt"></a></li>
-                    <li><a target="_blank" href="https://www.instagram.com/" class="ftinst"></a></li>
-                    <li><a target="_blank" href="https://accounts.google.com/ServiceLogin?" class="ftdrib"></a></li>
-                </ul>
-            </div>
+                    $().UItoTop({
+                        easingType: 'easeOutQuart'
+                    });
+
+                });
+            </script>
+            <a href="#home" id="toTop" class="scroll" style="display: block;">
+                <span id="toTopHover" style="opacity: 1;"> </span>
+            </a>
         </div>
-    </div>
-    <div class="ft-bottom">
-        <div class="container">
-            <p>RubenRodriguez | YesicaRojas | NassimBoussaidi</p>
-        </div>
-    </div>
-
-    <!-- script para el triangulo que lleva al header -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            /*
-             var defaults = {
-             containerID: 'toTop', // fading element id
-             containerHoverID: 'toTopHover', // fading element hover id
-             scrollSpeed: 1200,
-             easingType: 'linear'
-             };
-             */
-
-            $().UItoTop({
-                easingType : 'easeOutQuart'
-            });
-
-        });
-    </script>
-    <a href="#home" id="toTop" class="scroll" style="display: block;">
-        <span id="toTopHover" style="opacity: 1;"> </span>
-    </a>
-</div>
-<!--Fin del footer-->
-</body>
-<!--body-->
+        <!--Fin del footer-->
+    </body>
+    <!--body-->
 </html>

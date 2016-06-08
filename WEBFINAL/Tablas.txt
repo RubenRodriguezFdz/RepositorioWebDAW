@@ -24,8 +24,27 @@ material_prod varchar(45) NOT NULL,
 precio_prod DEC(6,2) NOT NULL
 )DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
-INSERT INTO productos (nombre_prod, categoria_prod, material_prod, precio_prod) VALUES (
-'bolso bonito', 'bolso', 'cuero', 19.99);
+INSERT INTO productos (nombre_prod, categoria_prod, material_prod, precio_prod)
+VALUES 
+('Bolso cuero', 'accesorios', 'cuero', 19.99),
+('Funda gafas', 'accesorios', 'cuero', 9.99),
+('Pendientes pandora', 'accesorios', 'plastico', 5.99),
+('Pendientes dorados', 'accesorios', 'metal', 11.99),
+('Pulsera reloj', 'accesorios', 'cuero', 25.00),
+('Anillo cuero', 'accesorios', 'cuero', 4.99),
+('Cartera cuero', 'accesorios', 'cuero', 9.99),
+('Funda movil', 'accesorios', 'cuero', 7.99),
+('Juego Pendientes/Anillo', 'accesorios', 'cuero/plastico', 19.99),
+('Mochila', 'accesorios', 'tela', 16.00),
+('Fundas movil', 'accesorios', 'cuero', 9.99),
+('Cuadro madera', 'hogar', 'madera', 19.50),
+('Portavelas', 'hogar', 'reciclado', 3.99),
+('Decoracion habitaci�n', 'hogar', 'completo', 259.99),
+('Perchero madera', 'hogar', 'madera', 29.99),
+('Estanteria', 'hogar', 'madera', 94.99),
+('Juego botellas', 'hogar', 'cristal', 29.99),
+('Estantería panal', 'hogar', 'madera', 24.99);
+>>>>>>> feature-nassim
 
 CREATE TABLE pedidos (
 id_pedido INT(3) NOT NULL PRIMARY KEY,

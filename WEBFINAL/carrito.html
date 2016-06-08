@@ -24,244 +24,250 @@ Descripcion= Página contacto que contiene el formulario
 -->
 <!DOCTYPE html>
 <html>
-<head>
-    <title>HandsMade</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <script type="application/x-javascript">
+    <head>
+        <title>HandsMade</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script type="application/x-javascript">
 
-        addEventListener("load", function () {
+            addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
-        }, false);
-        function hideURLbar() {
+            }, false);
+            function hideURLbar() {
             window.scrollTo(0, 1);
-        }
+            }
 
-    </script>
+        </script>
 
-    <link rel="stylesheet" href="css/lightbox.css" type="text/css"
-          media="all"/>
-    <!--bootstrap-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <!--coustom css-->
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
-    <!--default-js-->
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <!--menu_jqueryLogin-js-->
-    <script src="js/menu_jqueryLogin.js"></script>
-    <!--bootstrap-js-->
-    <script src="js/bootstrap.min.js"></script>
-    <!--script-->
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/carrito.js"></script>
+        <link rel="stylesheet" href="css/lightbox.css" type="text/css"
+              media="all"/>
+        <!--bootstrap-->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <!--coustom css-->
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <!--default-js-->
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <!--menu_jqueryLogin-js-->
+        <script src="js/menu_jqueryLogin.js"></script>
+        <!--bootstrap-js-->
+        <script src="js/bootstrap.min.js"></script>
+        <!--script-->
+        <script type="text/javascript" src="js/move-top.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/carrito.js"></script>
+        <script type="text/javascript" src="js/contador.js"></script>
+        
 
-</head>
-<!--body-->
-<body>
-<!-------------Header---------------->
+    </head>
+    <!--body-->
+    <body>
+        <!-------------Header---------------->
 
-<div class="container">
-    <div class="row">
-        <header>
-            <div class="logo col-xs-6 col-sm-6 col-md-3">
-                <a href="index.html"> <img src="images/logo (3).png"
-                                           class="animated  hinge img-responsive ">
-                </a>
-            </div>
-            <div class="nombreEmpresa col-xs-6 col-sm-6 col-md-6">
-                <h1>
-                    <a href="index.html"><span>Hands</span>Made</a>
-                </h1>
+        <div class="container">
+            <div class="row">
+                <header>
+                    <div class="logo col-xs-6 col-sm-6 col-md-3">
+                        <a href="index.html"> <img src="images/logo (3).png"
+                                                   class="animated  hinge img-responsive ">
+                        </a>
+                    </div>
+                    <div class="nombreEmpresa col-xs-6 col-sm-6 col-md-6">
+                        <h1>
+                            <a href="index.html"><span>Hands</span>Made</a>
+                        </h1>
 
-            </div>
-            <div class="todo col-xs-12 col-sm-12 col-md-3">
-                <div class="row rowTranslate">
-                </div>
-                <div class="row" id="registerLogin">
-                    <div class=" col-xs-12 col-sm-12 col-md-12">
-                        <div class="dropdown-grids">
-                            <div id="loginContainer">
-                                <a id="loginButton"><span>Login</span></a>
-                                <div style="display: none;" id="loginBox">
-                                    <form id="loginForm">
-                                        <div class="login-grids">
-                                            <div class="login-grid-left">
-                                                <fieldset id="body">
-                                                    <fieldset>
-                                                        <label for="loginup">Login</label> <input
-                                                            name="loginup" id="loginup" type="text">
-                                                    </fieldset>
-                                                    <fieldset>
-                                                        <label for="password">Password</label> <input
-                                                            name="password" id="password" type="password">
-                                                    </fieldset>
-                                                </fieldset>
-                                                <div id="errorLogin" style="color: red;"></div>
-                                                <input id="login" value="Sign in" type="button" onclick="openSession()">
-                                                <div class="or-grid">
-                                                    <p>OR</p>
-                                                </div>
-                                                <div class="social-sits">
-                                                    <div class="facebook-button">
-                                                        <a id="loginFace" href="#">Connect with Facebook</a>
+                    </div>
+                    <div class="todo col-xs-12 col-sm-12 col-md-3">
+                        <div class="row rowTranslate">
+                        </div>
+                        <div class="row" id="registerLogin">
+                            <div class=" col-xs-12 col-sm-12 col-md-12">
+                                <div class="dropdown-grids">
+                                    <div id="loginContainer">
+                                        <a id="loginButton"><span>Login</span></a>
+                                        <div style="display: none;" id="loginBox">
+                                            <form id="loginForm">
+                                                <div class="login-grids">
+                                                    <div class="login-grid-left">
+                                                        <fieldset id="body">
+                                                            <fieldset>
+                                                                <label for="loginup">Login</label> <input
+                                                                    name="loginup" id="loginup" type="text">
+                                                            </fieldset>
+                                                            <fieldset>
+                                                                <label for="password">Password</label> <input
+                                                                    name="password" id="password" type="password">
+                                                            </fieldset>
+                                                        </fieldset>
+                                                        <div id="errorLogin" style="color: red;"></div>
+                                                        <input id="login" value="Sign in" type="button" onclick="openSession()">
+                                                        <div class="or-grid">
+                                                            <p>OR</p>
+                                                        </div>
+                                                        <div class="social-sits">
+                                                            <div class="facebook-button">
+                                                                <a id="loginFace" href="#">Connect with Facebook</a>
+                                                            </div>
+
+                                                            <div class="button-bottom">
+                                                                <p>
+                                                                    New account? <a href="signup.html">Signup</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
                                                     </div>
-
-                                                    <div class="button-bottom">
-                                                        <p>
-                                                            New account? <a href="signup.html">Signup</a>
-                                                        </p>
-                                                    </div>
                                                 </div>
-                                            </div>
+                                            </form>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div id="logActive" class="row"></div>
+                        <div class="row rowSearch">
+                            <div class="search col-xs-9 col-sm-9 col-md-9">
+
+                                <form method="post" action="search.html">
+                                    <input type="text" name="query" id="query" placeholder="Search…"
+                                           autocomplete="off" value="">
+                                </form>
+                            </div>
+                            <div class="mini-cart col-xs-col-sm-2 col-md-1">
+                                <!-- Mini cart -->
+                                <a href="carrito.html" title="Go to cart →"> <span id="mini">3</span>
+                                </a>
+                                <!-- End class="mini-cart" -->
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+
+        <!----------Fin header--------------->
+
+        <!-----------Menu de navegacion------------->
+
+        <nav class="navbar navbar-default nav-dflt-setin">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header nav-min-wid">
+                    <button type="button" class="navbar-toggle collapsed"
+                            data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                            aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span> <span
+                            class="icon-bar"></span> <span class="icon-bar"></span> <span
+                            class="icon-bar"></span>
+                    </button>
+                    <h1>
+                        <a class="navbar-brand" href="index.html"></a>
+                    </h1>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse "
+                     id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav nav-max-wid cl-effect-5" id="cl-effect-5">
+                        <li><a href="index.html"><span data-hover="Inicio">Inicio</span></a></li>
+                        <li><a href="tienda.html"><span data-hover="Tienda">Tienda</span></a></li>
+                        <li><a href="galeria.html"><span data-hover="Galeria">Galeria</span></a></li>
+                        <li><a href="nosotros.html"><span data-hover="Nosotros">Nosotros</span></a></li>
+                        <li><a href="contacto.html"><span data-hover="Contacto">Contacto</span></a></li>
+                        <li><a href="carrito.html"><span data-hover="Carrito" class="active">Carrito</span></a></li>
+                    </ul>
+
+                </div>
+                <!-- /.navbar-collapse -->
+                <div class="clearfix"></div>
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+        <!--fin del menu de navegacion-->
+
+        <!-- carrito -->
+        <div class="container">
+
+            <div class="row">
+                <section class="cart" id="carro" >
+                    <div class='col-md-12' style='background-image: url(images/carro-de.png);'></div>
+                </section>
+                <!--style="background-image: url(images/carro-de.png);background-size: 100%;"-->
+            </div>
+        </div>
+        <!--Fin carrito-->
+
+        <!--footer-->
+        <div class="footer">
+            <div class="ft-top">
+                <div class="container">
+                    <div class="linksFooter col-xs-12 col-md-3">
+                        <ul>
+                            <li><a href="#" class="">Trabaja con nosotros</a></li>
+                            <li><a href="nosotros.html" class="">Nosotros</a></li>
+                            <li><a href="contacto.html" class="">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="linksFooter col-xs-12 col-md-3">
+                        <ul>
+                            <li><a href="signup.html" class="">Registro</a></li>
+                            <li><a href="politica.html" class="">Politica de privacidad</a></li>
+                            <li><a href="cookies.html" class="">Cookies</a></li>
+                        </ul>
+                    </div>
+                    <div class="aceptamos col-xs-12 col-md-3">
+                        <ul>
+                            <li><img
+                                    src="https://static.wixstatic.com/media/cda177_66112d8828944365b8a0fb3f95e423a0.png/v1/fill/w_32,h_20,al_c,usm_0.66_1.00_0.01/cda177_66112d8828944365b8a0fb3f95e423a0.png" /></li>
+                            <li><img
+                                    src="https://static.wixstatic.com/media/cda177_0292d75330eb4c46819ebd76e2b71edd.png/v1/fill/w_34,h_22,al_c,usm_0.66_1.00_0.01/cda177_0292d75330eb4c46819ebd76e2b71edd.png" /></li>
+                            <li><img
+                                    src="https://static.wixstatic.com/media/cda177_ae6aa613f4e049c697544cc8c8375ea2.png/v1/fill/w_33,h_21,al_c,usm_0.66_1.00_0.01/cda177_ae6aa613f4e049c697544cc8c8375ea2.png" /></li>
+                            <li><img
+                                    src="https://static.wixstatic.com/media/cda177_91a1dcd4c6d44674acf4a562b09838f6.png/v1/fill/w_35,h_22,al_c,usm_0.66_1.00_0.01/cda177_91a1dcd4c6d44674acf4a562b09838f6.png" /></li>
+                        </ul>
+                    </div>
+                    <div class="social-media col-xs-12 col-md-3">
+                        <ul>
+                            <li><a target="_blank" href="https://www.facebook.com/" class="ftfb"></a></li>
+                            <li><a target="_blank" href="https://twitter.com/" class="fttwt"></a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/" class="ftinst"></a></li>
+                            <li><a target="_blank" href="https://accounts.google.com/ServiceLogin?" class="ftdrib"></a></li>
+                        </ul>
                     </div>
                 </div>
-                <div id="logActive" class="row"></div>
-                <div class="row rowSearch">
-                    <div class="search col-xs-9 col-sm-9 col-md-9">
-
-                        <form method="post" action="search.html">
-                            <input type="text" name="query" id="query" placeholder="Search…"
-                                   autocomplete="off" value="">
-                        </form>
-                    </div>
-                    <div class="mini-cart col-xs-col-sm-2 col-md-1">
-                        <!-- Mini cart -->
-                        <a href="cart.html" title="Go to cart →"> <span>3</span>
-                        </a>
-                        <!-- End class="mini-cart" -->
-                    </div>
+            </div>
+            <div class="ft-bottom">
+                <div class="container">
+                    <p>RubenRodriguez | YesicaRojas | NassimBoussaidi</p>
                 </div>
             </div>
-        </header>
-    </div>
-</div>
 
-<!----------Fin header--------------->
+            <!-- script para el triangulo que lleva al header -->
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    /*
+                     var defaults = {
+                     containerID: 'toTop', // fading element id
+                     containerHoverID: 'toTopHover', // fading element hover id
+                     scrollSpeed: 1200,
+                     easingType: 'linear'
+                     };
+                     */
 
-<!-----------Menu de navegacion------------->
+                    $().UItoTop({
+                        easingType: 'easeOutQuart'
+                    });
 
-<nav class="navbar navbar-default nav-dflt-setin">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header nav-min-wid">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                    aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span> <span
-                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                    class="icon-bar"></span>
-            </button>
-            <h1>
-                <a class="navbar-brand" href="index.html"></a>
-            </h1>
+                });
+            </script>
+            <a href="#home" id="toTop" class="scroll" style="display: block;">
+                <span id="toTopHover" style="opacity: 1;"> </span>
+            </a>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse "
-             id="bs-example-navbar-collapse-1">
+        <!--Fin del footer-->
 
-            <ul class="nav navbar-nav nav-max-wid cl-effect-5" id="cl-effect-5">
-                <li><a href="index.html"><span data-hover="Inicio">Inicio</span></a></li>
-                <li><a href="tienda.html"><span data-hover="Tienda">Tienda</span></a></li>
-                <li><a href="galeria.html"><span data-hover="Galeria">Galeria</span></a></li>
-                <li><a href="nosotros.html"><span data-hover="Nosotros">Nosotros</span></a></li>
-                <li><a href="contacto.html"><span data-hover="Contacto">Contacto</span></a></li>
-                <li><a href="carrito.html"><span data-hover="Carrito" class="active">Carrito</span></a></li>
-            </ul>
-
-        </div>
-        <!-- /.navbar-collapse -->
-        <div class="clearfix"></div>
-    </div>
-    <!-- /.container-fluid -->
-</nav>
-
-<!--fin del menu de navegacion-->
-
-<!-- carrito -->
-
-<section class="cart" id="carro">
-
-
-</section>
-<!--Fin carrito-->
-
-<!--footer-->
-<div class="footer">
-    <div class="ft-top">
-        <div class="container">
-            <div class="linksFooter col-xs-12 col-md-3">
-                <ul>
-                    <li><a href="#" class="">Trabaja con nosotros</a></li>
-                    <li><a href="nosotros.html" class="">Nosotros</a></li>
-                    <li><a href="contacto.html" class="">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="linksFooter col-xs-12 col-md-3">
-                <ul>
-                    <li><a href="signup.html" class="">Registro</a></li>
-                    <li><a href="politica.html" class="">Politica de privacidad</a></li>
-                    <li><a href="cookies.html" class="">Cookies</a></li>
-                </ul>
-            </div>
-            <div class="aceptamos col-xs-12 col-md-3">
-                <ul>
-                    <li><img
-                            src="https://static.wixstatic.com/media/cda177_66112d8828944365b8a0fb3f95e423a0.png/v1/fill/w_32,h_20,al_c,usm_0.66_1.00_0.01/cda177_66112d8828944365b8a0fb3f95e423a0.png" /></li>
-                    <li><img
-                            src="https://static.wixstatic.com/media/cda177_0292d75330eb4c46819ebd76e2b71edd.png/v1/fill/w_34,h_22,al_c,usm_0.66_1.00_0.01/cda177_0292d75330eb4c46819ebd76e2b71edd.png" /></li>
-                    <li><img
-                            src="https://static.wixstatic.com/media/cda177_ae6aa613f4e049c697544cc8c8375ea2.png/v1/fill/w_33,h_21,al_c,usm_0.66_1.00_0.01/cda177_ae6aa613f4e049c697544cc8c8375ea2.png" /></li>
-                    <li><img
-                            src="https://static.wixstatic.com/media/cda177_91a1dcd4c6d44674acf4a562b09838f6.png/v1/fill/w_35,h_22,al_c,usm_0.66_1.00_0.01/cda177_91a1dcd4c6d44674acf4a562b09838f6.png" /></li>
-                </ul>
-            </div>
-            <div class="social-media col-xs-12 col-md-3">
-                <ul>
-                    <li><a target="_blank" href="https://www.facebook.com/" class="ftfb"></a></li>
-                    <li><a target="_blank" href="https://twitter.com/" class="fttwt"></a></li>
-                    <li><a target="_blank" href="https://www.instagram.com/" class="ftinst"></a></li>
-                    <li><a target="_blank" href="https://accounts.google.com/ServiceLogin?" class="ftdrib"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="ft-bottom">
-        <div class="container">
-            <p>RubenRodriguez | YesicaRojas | NassimBoussaidi</p>
-        </div>
-    </div>
-
-    <!-- script para el triangulo que lleva al header -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            /*
-             var defaults = {
-             containerID: 'toTop', // fading element id
-             containerHoverID: 'toTopHover', // fading element hover id
-             scrollSpeed: 1200,
-             easingType: 'linear'
-             };
-             */
-
-            $().UItoTop({
-                easingType : 'easeOutQuart'
-            });
-
-        });
-    </script>
-    <a href="#home" id="toTop" class="scroll" style="display: block;">
-        <span id="toTopHover" style="opacity: 1;"> </span>
-    </a>
-</div>
-<!--Fin del footer-->
-
-</body>
-<!--body-->
+    </body>
+    <!--body-->
 </html>

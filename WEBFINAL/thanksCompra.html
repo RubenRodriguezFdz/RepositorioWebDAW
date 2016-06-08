@@ -62,10 +62,10 @@ Descripcion= Página contacto que contiene el formulario
     <script type="text/javascript" src="js/easing.js"></script>
     <script type="text/javascript" src="js/registro.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/thanksCompra.js" type="text/javascript"></script>
 </head>
 <!--body-->
 <body>
-<input type="hidden" id="sess_var" value="<?php echo 'Water Melon'; ?>"/>
 <!-------------Header---------------->
 
 <div class="container">
@@ -139,7 +139,7 @@ Descripcion= Página contacto que contiene el formulario
                     </div>
                     <div class="mini-cart col-xs-col-sm-2 col-md-1">
                         <!-- Mini cart -->
-                        <a href="carrito.html" title="Go to cart →"> <span>3</span>
+                        <a href="carrito.html" title="Go to cart →"> <span>0</span>
                         </a>
                         <!-- End class="mini-cart" -->
                     </div>
@@ -194,133 +194,15 @@ Descripcion= Página contacto que contiene el formulario
 
 <div class="contact">
     <div class="container">
-        <h2>Registro</h2>
-        <form action="php/registrar.php" method="POST">
-
-            <!-- Mensaje de aviso de errores devueltos por el servidor -->
-            <div id="mensajePHP" class="col-sm-12 col-xs-12">
-            </div>
-
-            <!-- Mensaje de aviso de campos obligatorios -->
-            <div id="menPrin" class="col-sm-12 col-xs-12">
-                Los campos obligatorios estan marcados con el simbolo *
-            </div>
-
-            <div class="col-sm-3 col-xs-12 regist-left"></div>
-            <div class="col-sm-9 col-xs-12 regist-rigth">
-
-                <!-- Login -->
-                <div class="col-sm-12 col-xs-12 reglab">
-                    <label for="log">Login*</label>
-                </div>
-                <div class="col-sm-9 col-xs-9">
-                    <input type="text" id="log" name="log" class="name-con" placeholder="Login">
-                </div>
-                <div class="col-sm-3 col-xs-3 error" id="errorLog">
-                </div>
-
-                <!-- Password -->
-                <div class="col-sm-12 col-xs-12 reglab">
-                    <label for="pass">Password*</label>
-                </div>
-                <div class="col-sm-9 col-xs-9">
-                    <input type="password" id="pass" name="pass" class="name-con" placeholder="Password">
-                </div>
-                <div class="col-sm-3 col-xs-3" id="errorPass">
-                </div>
-
-                <!-- Password Confirmacion -->
-                <div class="col-sm-12 col-xs-12 reglab">
-                    <label for="passConf">Confirmar Password*</label>
-                </div>
-                <div class="col-sm-9 col-xs-9">
-                    <input type="password" id="passConf" name="passConf" class="name-con"
-                           placeholder="Confirmar Password">
-                </div>
-                <div class="col-sm-3 col-xs-3" id="errorConf">
-                </div>
-
-                <!-- Nombre -->
-                <div class="col-sm-12 col-xs-12 reglab">
-                    <label for="nombre">Nombre*</label>
-                </div>
-                <div class="col-sm-9 col-xs-9">
-                    <input type="text" id="nombre" name="nombre" class="name-con" placeholder="Nombre">
-                </div>
-                <div class="col-sm-3 col-xs-3" id="errorNombre">
-                </div>
-
-                <!-- Apellidos -->
-                <div class="col-sm-12 col-xs-12 reglab">
-                    <label for="apellidos">Apellidos*</label>
-                </div>
-                <div class="col-sm-9 col-xs-9">
-                    <input type="text" id="apellidos" name="apellidos" class="name-con" placeholder="Apellidos">
-                </div>
-                <div class="col-sm-3 col-xs-3" id="errorApe">
-                </div>
-
-                <!-- DNI -->
-                <div class="col-sm-12 col-xs-12 reglab">
-                    <label for="dni">D.N.I.*</label>
-                </div>
-                <div class="col-sm-9 col-xs-9">
-                    <input type="text" id="dni" name="dni" class="name-con" placeholder="D.N.I.">
-                </div>
-                <div class="col-sm-3 col-xs-3" id="errorDni">
-                </div>
-
-                <!-- Email -->
-                <div class="col-sm-12 col-xs-12 reglab">
-                    <label for="e-mail">Email*</label>
-                </div>
-                <div class="col-sm-9 col-xs-9">
-                    <input type="text" id="e-mail" name="e-mail" class="name-con" placeholder="ejemplo@ejemplo.com">
-                </div>
-                <div class="col-sm-3 col-xs-3" id="errorEmail">
-                </div>
-
-                <!-- Dirección -->
-                <div class="col-sm-12 col-xs-12 reglab">
-                    <label for="direccion">Direccion*</label>
-                </div>
-                <div class="col-sm-9 col-xs-9">
-                    <input type="text" id="direccion" name="direccion" class="name-con" placeholder="C/...">
-                </div>
-                <div class="col-sm-3 col-xs-3" id="errorDir">
-                </div>
-
-                <!-- Telefono 1 -->
-                <div class="col-sm-12 col-xs-12 reglab">
-                    <label for="telefono1">Teléfono 1*</label>
-                </div>
-                <div class="col-sm-9 col-xs-9">
-                    <input type="text" id="telefono1" name="telefono1" class="name-con" placeholder="(9/6)00 000 000">
-                </div>
-                <div class="col-sm-3 col-xs-3" id="errorTel1">
-                </div>
-
-                <!-- Teléfono 2 -->
-                <div class="col-sm-12 col-xs-12 reglab">
-                    <label for="telefono2">Telefono 2</label>
-                </div>
-                <div class="col-sm-9 col-xs-9">
-                    <input type="text" id="telefono2" name="telefono2" class="name-con" placeholder="(9/6)00 000 000">
-                </div>
-                <div class="col-sm-3 col-xs-3" id="errorTel2">
+        <h2>Carrito</h2>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="images/marcos.jpg" alt="banner" class="banner-wid">
+                <div class="carousel-caption" id="thanks">
+                    Gracias por realizar su compra en nuestra pagina
                 </div>
             </div>
-            <!-- Mensaje dinamico de aviso de campos obligatorios sin rellenar o campos rellenados -->
-            <div class="col-sm-12 col-xs-12" id="regMen">
-                Rellene todos los campos obligatorios correctamente y pulse "Registrar"
-            </div>
-            <div class="col-sm-12 col-xs-12 reg">
-                <center>
-                    <input type="submit" id="registrar" name="registro" id="registro" value="Registrar"
-                           disabled="disabled">
-                </center>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 

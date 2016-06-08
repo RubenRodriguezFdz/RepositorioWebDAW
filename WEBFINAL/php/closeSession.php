@@ -26,6 +26,6 @@ session_start();
 
 $_SESSION['on'] = false;
 $_SESSION['login'] = "";
-$_SESSION['cart_items'] = "";
+$_SESSION['cart_items'] = NULL;
 
 ?>
