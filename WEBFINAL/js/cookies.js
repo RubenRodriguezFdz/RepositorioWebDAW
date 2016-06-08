@@ -23,6 +23,7 @@ Descripcion= Página contacto que contiene el formulario
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+// BLOQUE COOKIES
 function getCookie(c_name){
     var c_value = document.cookie;
     var c_start = c_value.indexOf(" " + c_name + "=");
@@ -56,6 +57,5 @@ function PonerCookie(){
     setCookie('HandsMade','1',365);
     document.getElementById("barraaceptacion").style.display="none";
 }
-
-<!--//FIN BLOQUE COOKIES-->
+// FIN BLOQUE COOKIES
 
