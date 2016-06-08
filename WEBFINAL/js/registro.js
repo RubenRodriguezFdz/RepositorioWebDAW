@@ -1,10 +1,31 @@
 /**
- * Created by Chubi on 02/04/2016.
+ * Autor= Ruben Rodríguez Fernández
+ * Fecha= 15-Abr-2016
+ * Licencia= gpl30
+ * Version= 1.0
+ * Descripcion= Javascript del registro
+ * */
+/*
+ * Copyright (C) 2016 Ruben
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 $(function(){//DOM Ready
 
-    // Se definen las variables de validacion del formulario. Se inicalizan a false excepto telefono2 ya que podrá estar vacia
+    // Se definen las variables de validacion del formulario.
+    // Se inicalizan a false excepto telefono2 ya que podrá estar vacia
     var logVal = false;
     var passVal = false;
     var passConVal = false;
@@ -15,27 +36,16 @@ $(function(){//DOM Ready
     var direccionVal = false;
     var tel1Val = false;
     var tel2Val = true;
-
-    /*
-    * Función que registra el logeo
-     */
-    $("#login").click(function (){
-        console.log ("Accediendo a BD");
-        $.post("php/logearse.php", "loginup=" + $("#loginup").val() + "&password=" + $("#password").val(), function (data, status) {
-            console.log("respuesta " + JSON.parse(data) + " servidor");
-        })
-    });
-
-    /*
-    * Función que valida que todas las variables de validación sean correctas.
-    * Las variables se modificarán cada una con su propia función de validación
-    * En caso de que todas las variables sean true, se habilitará el boton de envio de formulario y
-    * se modificará el mensaje final del formulario
-    * En caso contrario se deshabilitará el boton de envio
+    
+    /**
+     * valida : valida que todas las variables validación sean correctas.
+     *          Evalua que todas las variables sean true.
+     *          En caso correcto, se habilitará el botón de envio y se modificará el mensaje.
+     *          En caso incorrecto, se inhabilitará el botón de envio y se modificará el mensaje.
      */
     function valida(){
        if (logVal == false || passVal == false || passConVal == false || nombreVal == false || apellidosVal == false || dniVal == false
-       || direccionVal == false || tel1Val == false || tel2Val == false) {
+       || emailVal == false || direccionVal == false || tel1Val == false || tel2Val == false) {
            $("#registrar").attr("disabled", true);
            $("#regMen").text('Rellene todos los campos obligatorios correctamente y pulse "Registrar"');
        }else{
@@ -44,7 +54,7 @@ $(function(){//DOM Ready
        }
     };
 
-    /*
+    /**
     * Función que valida dinámicamente la introdución de un login en el formulario
     * Comprueba que la cadena introducida son caracteres alfanuméricos sin espacios con un mínimo de 5 caracteres.
     * En caso contrario introduce el error en el campo div de su error y settea la variable de validacion y accede a la funcion valida
@@ -54,15 +64,15 @@ $(function(){//DOM Ready
      */
     $("input#log").on('input',function(){
         if ($("input#log").val().length < 5) {
-            $("#errorLog").html("<img src='img/icono_false.png' width='20px' height='20px'> Mínimo 5 caracteres");
+            $("#errorLog").html("<img src='images/icono_false.png' width='20px' height='20px'> Mínimo 5 caracteres");
             if ($("input#log").val() == ""){
-                $("#errorLog").html("<img src='img/icono_false.png' width='20px' height='20px'> Rellene este campo");
+                $("#errorLog").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
             }
             logVal = false;
             valida();
         }else{
             if (!(/^[A-Za-z0-9]+$/.test($("input#log").val())) || $("input#log").val() == "") {
-                $("#errorLog").html("<img src='img/icono_false.png' width='20px' height='20px'> Introduzca caracteres alfanuméricos");
+                $("#errorLog").html("<img src='images/icono_false.png' width='20px' height='20px'> Introduzca caracteres alfanuméricos");
                 logVal = false;
                 valida();
             }else{
@@ -71,11 +81,11 @@ $(function(){//DOM Ready
                 $.post("php/login.php", "login=" + $("#log").val(), function (data, status) {
                     var LogResult = $(data).find("log").text();
                     if (LogResult === "false"){
-                        $("#errorLog").html("<img src='img/icono_false.png' width='20px' height='20px'> Login Existente");
+                        $("#errorLog").html("<img src='images/icono_false.png' width='20px' height='20px'> Login Existente");
                         logVal = false;
                         valida();
                     }else {
-                        $("#errorLog").html("<img src='img/icono_true.png' width='20px' height='20px'> Login Correcto");
+                        $("#errorLog").html("<img src='images/icono_true.png' width='20px' height='20px'> Login Correcto");
                         logVal = true;
                         valida();
                     }
@@ -84,7 +94,7 @@ $(function(){//DOM Ready
         }
     });
 
-    /*
+    /**
      * Función que valida dinámicamente la introdución de un password en el formulario
      * Comprueba que la cadena introducida son caracteres alfanuméricos sin espacios con un mínimo de 5 caracteres.
      * En caso contrario introduce el error en el campo div de su error y settea la variable de validacion y accede a la funcion valida
@@ -92,26 +102,26 @@ $(function(){//DOM Ready
      */
     $("input#pass").on('input',function(){
         if ($("input#pass").val().length < 5){
-            $("#errorPass").html("<img src='img/icono_false.png' width='20px' height='20px'> Mínimo 5 caracteres");
+            $("#errorPass").html("<img src='images/icono_false.png' width='20px' height='20px'> Mínimo 5 caracteres");
             if ($("input#pass").val() == ""){
-                $("#errorPass").html("<img src='img/icono_false.png' width='20px' height='20px'> Rellene este campo");
+                $("#errorPass").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
             }
             passVal = false;
             valida();
         }else{
             if (!(/^[A-Za-z0-9]+$/.test($("input#pass").val())) || $("input#pass").val() == "") {
-                $("#errorPass").html("<img src='img/icono_false.png' width='20px' height='20px'> Introduzca caracteres alfanuméricos");
+                $("#errorPass").html("<img src='images/icono_false.png' width='20px' height='20px'> Introduzca caracteres alfanuméricos");
                 passVal = false;
                 valida();
             }else{
-                $("#errorPass").html("<img src='img/icono_true.png' width='20px' height='20px'> Password Correcto");
+                $("#errorPass").html("<img src='images/icono_true.png' width='20px' height='20px'> Password Correcto");
                 passVal = true;
                 valida();
             }
         }
     });
 
-    /*
+    /**
      * Función que valida dinámicamente la introdución de la confirmación del password en el formulario
      * Comprueba que la cadena introducida coincida con la del campo password
      * En caso contrario introduce el error en el campo div de su error, settea la variable de validacion y accede a la funcion valida
@@ -119,62 +129,62 @@ $(function(){//DOM Ready
      */
     $("input#passConf").on('input',function(){
         if ($("input#passConf").val() != $("input#pass").val()){
-            $("#errorConf").html("<img src='img/icono_false.png' width='20px' height='20px'> Password no coincidente");
+            $("#errorConf").html("<img src='images/icono_false.png' width='20px' height='20px'> Password no coincidente");
             if ($("input#passConf").val() == ""){
-                $("#errorConf").html("<img src='img/icono_false.png' width='20px' height='20px'> Rellene este campo");
+                $("#errorConf").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
             }
             passConVal = false;
             valida();
         }else{
-            $("#errorConf").html("<img src='img/icono_true.png' width='20px' height='20px'> Password coincidente");
+            $("#errorConf").html("<img src='images/icono_true.png' width='20px' height='20px'> Password coincidente");
             passConVal = true;
             valida();
         }
     });
 
-    /*
+    /**
      * Función que valida dinámicamente la introdución de un nombre en el formulario
      * Comprueba que la cadena introducida son letras con o sin espacios
      * En caso contrario introduce el error en el campo div de su error y settea la variable de validacion y accede a la funcion valida
      * Si todo es correcto, avisa al usuario, settea la variable a true y accede a la funcion valida
      */
     $("input#nombre").on('input',function(){
-        if (!(/^[A-Z a-z áÁéÉíÍóÓúÚñÑ]+$/.test($("input#nombre").val())) || $("input#nombre").val() == "") {
-            $("#errorNombre").html("<img src='img/icono_false.png' width='20px' height='20px'> Introduzca letras y/o espacios");
+        if (!(/^[A-Za-záÁéÉíÍóÓúÚñÑ]{1}[A-Z a-z áÁéÉíÍóÓúÚñÑ]*$/.test($("input#nombre").val())) || $("input#nombre").val() == "") {
+            $("#errorNombre").html("<img src='images/icono_false.png' width='20px' height='20px'> Introduzca letras y/o espacios");
             if ($("input#nombre").val() == ""){
-                $("#errorNombre").html("<img src='img/icono_false.png' width='20px' height='20px'> Rellene este campo");
+                $("#errorNombre").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
             }
             nombreVal = false;
             valida();
         }else{
-            $("#errorNombre").html("<img src='img/icono_true.png' width='20px' height='20px'> Nombre Correcto");
+            $("#errorNombre").html("<img src='images/icono_true.png' width='20px' height='20px'> Nombre Correcto");
             nombreVal = true;
             valida();
         }
     });
 
-    /*
+    /**
      * Función que valida dinámicamente la introdución de un apellido en el formulario
      * Comprueba que la cadena introducida son letras con o sin espacios
      * En caso contrario introduce el error en el campo div de su error y settea la variable de validacion y accede a la funcion valida
      * Si todo es correcto, avisa al usuario, settea la variable a true y accede a la funcion valida
      */
     $("input#apellidos").on('input',function(){
-        if (!(/^[A-Z a-z áÁéÉíÍóÓúÚñÑ]+$/.test($("input#apellidos").val())) || $("input#apellidos").val() == "") {
-            $("#errorApe").html("<img src='img/icono_false.png' width='20px' height='20px'> Introduzca letras y/o espacios");
+        if (!(/^[A-Za-záÁéÉíÍóÓúÚñÑ]{1}[A-Z a-z áÁéÉíÍóÓúÚñÑ]*$/.test($("input#apellidos").val())) || $("input#apellidos").val() == "") {
+            $("#errorApe").html("<img src='images/icono_false.png' width='20px' height='20px'> Introduzca letras y/o espacios");
             if ($("input#apellidos").val() == ""){
-                $("#errorApe").html("<img src='img/icono_false.png' width='20px' height='20px'> Rellene este campo");
+                $("#errorApe").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
             }
             apellidosVal = false;
             valida();
         }else{
-            $("#errorApe").html("<img src='img/icono_true.png' width='20px' height='20px'> Apellidos Correctos");
+            $("#errorApe").html("<img src='images/icono_true.png' width='20px' height='20px'> Apellidos Correctos");
             apellidosVal = true;
             valida();
         }
     });
 
-    /*
+    /**
      * Función que valida dinámicamente la introdución de un DNI en el formulario
      * Comprueba que la cadena introducida es un DNI correcto
      * En caso contrario introduce el error en el campo div de su error y settea la variable de validacion y accede a la funcion valida
@@ -184,20 +194,20 @@ $(function(){//DOM Ready
         var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B',
             'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
         if (!(/^\d{8}[A-Z]$/.test($("input#dni").val())) || ($("input#dni").val().charAt(8) != letras[($("input#dni").val().substring(0, 8)) % 23])) {
-            $("#errorDni").html("<img src='img/icono_false.png' width='20px' height='20px'> D.N.I. incorrecto. Ej:00000000A");
+            $("#errorDni").html("<img src='images/icono_false.png' width='20px' height='20px'> D.N.I. incorrecto. Ej:00000000A");
             if ($("input#dni").val() == ""){
-                $("#errorDni").html("<img src='img/icono_false.png' width='20px' height='20px'> Rellene este campo");
+                $("#errorDni").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
             }
             dniVal = false;
             valida();
         }else{
-            $("#errorDni").html("<img src='img/icono_true.png' width='20px' height='20px'> Dni Correcto");
+            $("#errorDni").html("<img src='images/icono_true.png' width='20px' height='20px'> Dni Correcto");
             dniVal = true;
             valida();
         }
     });
 
-    /*
+    /**
      * Función que valida dinámicamente la introdución de un email en el formulario
      * Comprueba que la cadena introducida es un email correcto
      * En caso contrario introduce el error en el campo div de su error y settea la variable de validacion y accede a la funcion valida
@@ -205,20 +215,20 @@ $(function(){//DOM Ready
      */
     $("input#e-mail").on('input',function(){
         if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test($("input#e-mail").val())) || $("input#e-mail").val() == "") {
-            $("#errorEmail").html("<img src='img/icono_false.png' width='20px' height='20px'> Email incorrecto. Ej: ejemplo@ejemplo.com");
+            $("#errorEmail").html("<img src='images/icono_false.png' width='20px' height='20px'> Email incorrecto. Ej: ejemplo@ejemplo.com");
             if ($("input#e-mail").val() == ""){
-                $("#errorEmail").html("<img src='img/icono_false.png' width='20px' height='20px'> Rellene este campo");
+                $("#errorEmail").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
             }
             emailVal = false;
             valida();
         }else{
-            $("#errorEmail").html("<img src='img/icono_true.png' width='20px' height='20px'> Email correcto");
+            $("#errorEmail").html("<img src='images/icono_true.png' width='20px' height='20px'> Email correcto");
             emailVal = true;
             valida();
         }
     });
 
-    /*
+    /**
      * Función que valida dinámicamente la introdución de un nombre en el formulario
      * Comprueba que la cadena introducida no esta en blanco
      * En caso contrario introduce el error en el campo div de su error y settea la variable de validacion y accede a la funcion valida
@@ -226,18 +236,18 @@ $(function(){//DOM Ready
      */
     $("input#direccion").on('input',function(){
         if ($("input#direccion").val() == ""){
-            $("#errorDir").html("<img src='img/icono_false.png' width='20px' height='20px'> Rellene este campo");
+            $("#errorDir").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
             direccionVal = false;
             valida();
         }
         else{
-            $("#errorDir").html("<img src='img/icono_true.png' width='20px' height='20px'> Dirección Correcta");
+            $("#errorDir").html("<img src='images/icono_true.png' width='20px' height='20px'> Dirección Correcta");
             direccionVal = true;
             valida();
         }
     });
 
-    /*
+    /**
      * Función que valida dinámicamente la introdución del telefono 1 en el formulario
      * Comprueba que la cadena introducida son 9 número y que comienza por 9 o por 6
      * En caso contrario introduce el error en el campo div de su error y settea la variable de validacion y accede a la funcion valida
@@ -245,20 +255,20 @@ $(function(){//DOM Ready
      */
     $("input#telefono1").on('input',function(){
         if (!(/^[9|6][0-9]{8}$/.test($("input#telefono1").val())) || $("input#telefono1").val() == "") {
-            $("#errorTel1").html("<img src='img/icono_false.png' width='20px' height='20px'> Teléfono incorrecto. Ej: (9/6)00 000 000");
+            $("#errorTel1").html("<img src='images/icono_false.png' width='20px' height='20px'> Teléfono incorrecto. Ej: (9/6)00 000 000");
             if ($("input#telefono1").val() == ""){
-                $("#errorTel1").html("<img src='img/icono_false.png' width='20px' height='20px'> Rellene este campo");
+                $("#errorTel1").html("<img src='images/icono_false.png' width='20px' height='20px'> Rellene este campo");
             }
             tel1Val = false;
             valida();
         }else{
-            $("#errorTel1").html("<img src='img/icono_true.png' width='20px' height='20px'> Teléfono 1 Correcto");
+            $("#errorTel1").html("<img src='images/icono_true.png' width='20px' height='20px'> Teléfono 1 Correcto");
             tel1Val = true;
             valida();
         }
     });
 
-    /*
+    /**
      * Función que valida dinámicamente la introdución del telefono 2 en el formulario
      * Comprueba que la cadena introducida son 9 número y que comienza por 9 o por 6 o que está vacía
      * En caso contrario introduce el error en el campo div de su error y settea la variable de validacion y accede a la funcion valida
@@ -266,7 +276,7 @@ $(function(){//DOM Ready
      */
     $("input#telefono2").on('input',function(){
         if (!(/^[9|6][0-9]{8}$/.test($("input#telefono2").val()))) {
-            $("#errorTel2").html("<img src='img/icono_false.png' width='20px' height='20px'> Teléfono incorrecto. Ej: (9/6)00 000 000");
+            $("#errorTel2").html("<img src='images/icono_false.png' width='20px' height='20px'> Teléfono incorrecto. Ej: (9/6)00 000 000");
             tel2Val = false;
             valida();
             if ($("input#telefono2").val() == ""){
@@ -275,42 +285,9 @@ $(function(){//DOM Ready
                 valida();
             }
         }else{
-            $("#errorTel2").html("<img src='img/icono_true.png' width='20px' height='20px'> Teléfono 2 Correcto");
+            $("#errorTel2").html("<img src='images/icono_true.png' width='20px' height='20px'> Teléfono 2 Correcto");
             tel2Val = true;
             valida();
         }
     });
-
-    //Funcion que evalua los errores devueltos por el PHP
-    //En caso de que el PHP devuelva algun error, dicha funcion investigara el tipo de error.
-    //El PHP devuelve el error a traves de una variable definida en la url
-    function erroresPHP() {
-        //Se extrae la variable definida en la url
-        var paramstr = window.location.search.substr(1);
-        var paramarr = paramstr.split("&");
-        var params = {};
-        //Se extrae la variable pasado por  url
-        for (var i = 0; i < paramarr.length; i++) {
-            var tmparr = paramarr[i].split("=");
-            params[tmparr[0]] = tmparr[1];
-        }
-        //En caso de que la variable definida sea mensaje se accede al if.
-        //Se rellena el mensaje con el mensaje y se muestra
-        //En caso contrario se oculta el div mensaje
-        if (params['mensaje']) {
-            $("#mensajePHP").show();
-            //Dependiendo del tipo de error devuelto se mostrara un mensaje u otro
-            if (params['mensaje'] == "errorUsuario") {
-                //Error correspondiente a la introducción de datos del usuario.
-                $("#mensajePHP").html("Ha ocurrido un error en la introducción del usuario en la base de datos.");
-            }
-        } else {
-            //Se oculta el div mensaje
-            $("#mensajePHP").hide();
-        }
-
-    }
-
-    //Se llama por defecto a la funcion erroresPHP para que se ejecute
-    erroresPHP();
 });

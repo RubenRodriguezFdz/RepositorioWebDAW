@@ -41,8 +41,6 @@ Descripcion= Página contacto que contiene el formulario
 
     <link rel="stylesheet" href="css/lightbox.css" type="text/css"
           media="all"/>
-    <!--owl-css
-    <link href="css/owl.carousel.css" rel="stylesheet">-->
     <!--bootstrap-->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <!--coustom css-->
@@ -56,8 +54,9 @@ Descripcion= Página contacto que contiene el formulario
     <!--script-->
     <script type="text/javascript" src="js/move-top.js"></script>
     <script type="text/javascript" src="js/easing.js"></script>
-    <script type="text/javascript" src="js/contacto.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/carrito.js"></script>
+
 </head>
 <!--body-->
 <body>
@@ -172,8 +171,8 @@ Descripcion= Página contacto que contiene el formulario
                 <li><a href="tienda.html"><span data-hover="Tienda">Tienda</span></a></li>
                 <li><a href="galeria.html"><span data-hover="Galeria">Galeria</span></a></li>
                 <li><a href="nosotros.html"><span data-hover="Nosotros">Nosotros</span></a></li>
-                <li><a href="contacto.html"><span data-hover="Contacto" class="active">Contacto</span></a></li>
-                <li><a href="carrito.html"><span data-hover="Carrito">Carrito</span></a></li>
+                <li><a href="contacto.html"><span data-hover="Contacto">Contacto</span></a></li>
+                <li><a href="carrito.html"><span data-hover="Carrito" class="active">Carrito</span></a></li>
             </ul>
 
         </div>
@@ -182,43 +181,16 @@ Descripcion= Página contacto que contiene el formulario
     </div>
     <!-- /.container-fluid -->
 </nav>
+
 <!--fin del menu de navegacion-->
 
-<!-- contacto -->
-<div class="contact">
-    <div class="container">
-        <h2>contacto</h2>
-        <div class="col-sm-6 col-xs-12 contact-left">
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.749649899918!2d-3.6887137823487284!3d40.52502427392231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd43d52bd1794775%3A0x5851159fcfc32919!2sIES+Ciudad+Escolar!5e0!3m2!1ses!2ses!4v1464326787793"
-                        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="col-sm-6 col-xs-12 contact-right">
-            <div class="adress">
-                <ul>
-                    <li>Madrid</li>
-                    <li>España</li>
-                    <li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> +91 000 00 00</li>
+<!-- carrito -->
 
-                </ul>
-                <div class="clearfix"></div>
-            </div>
-            <div class="form-details">
-                <form>
-                    <input type="text" id="nameCont" class="name-con" placeholder="Name"><br>
-                    <input type="text" id="emailCont" class="email-con" placeholder="Email"><br>
-                    <textarea class="contact-area" id="messageCont" placeholder="Message"></textarea><br>
-                    <div id="mensajeContacto">Rellene todos los campos obligatorios correctamente y pulse "Enviar"</div>
-                    <br>
-                    <a class="newButton btn btn-default work-btn" type="button" id="enviarContacto" onclick="valida()">Enviar</a>
-                </form>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!--Fin contacto -->
+<section class="cart" id="carro">
+
+
+</section>
+<!--Fin carrito-->
 
 <!--footer-->
 <div class="footer">
@@ -289,6 +261,7 @@ Descripcion= Página contacto que contiene el formulario
     </a>
 </div>
 <!--Fin del footer-->
+
 </body>
 <!--body-->
 </html>
