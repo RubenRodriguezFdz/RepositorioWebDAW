@@ -1,3 +1,34 @@
+/*
+Autor= Yesica Rojas, Ruben Rodriguez, Nassim Bousaidi
+Fecha= 10.junio de 2016
+Licencia=  gp130
+Version= 1.0
+Descripcion= Página contacto que contiene el formulario
+-->
+<!--
+  Copyright (C) 2016 Yesica Rojas, Ruben Rodriguez, Nassim Bousaidi
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+ 
+/*fondo del video del home*/
+.fondoVideo{
+	background-color:  #C7AB84;
+	opacity:0.8;
+}
+
 /*padding del nombre de la empresa*/
 .nombreEmpresa{
 	padding-top: 100px;
@@ -5,7 +36,7 @@
 .nombreEmpresa h1 a span {
     color:  #C7AB84;
 }
-
+/*tamaño,color del link del nombre de la empresa*/
 .nombreEmpresa h1 a {
     color: #292929;
     padding: 0.2em 0;
@@ -16,9 +47,11 @@
 .traslate{
 	text-align: right;	
 }
+/*color de todos los enlaces*/
  a{
 	color:#000;
 }
+/*posicion del logo por encima del container*/
 .logo{
 	z-index: 1;
 }
@@ -91,6 +124,7 @@ opacity: 0;
 animation-name: hinge;
          }
 /********Fin de la animacion del logo***********/
+
 /*quita linea de todos los enlaces al tener el foco o pasar por encima*/
 a:focus, a:hover {
     text-decoration: none;
@@ -141,6 +175,7 @@ _header {
 	
 }
 
+/*padding de las filas del buscador  y el translate*/
 .rowSearch, .rowTranslate{
 	padding-top: 10px;
 	padding-bottom: 30px;
@@ -186,7 +221,7 @@ ul.cl-effect-5 a span {
 	-moz-transition: -moz-transform 0.3s;
 	transition: transform 0.3s;
 }
-
+/*efecto de las listas*/
 ul.cl-effect-5>li>a span::before {
 	position: absolute;
 	top: 100%;
@@ -207,7 +242,7 @@ ul.cl-effect-5 a:focus span {
 	transform: translateY(-100%);
     color: #C7AB84;
 }
-/**/
+/*posicion de todos los elementos siguientes*/
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
 }
@@ -234,6 +269,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 img.banner-wid{
     width: 100%;
 }
+/*************cookies************/
+#barraaceptacion {
+    display:none;
+    position:fixed;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    padding-bottom:50px;
+    width:100%;
+    text-align:center;
+    min-height:40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:#fff;
+    z-index:99999;
+}
+ 
+.inner {
+    width:100%;
+    position:absolute;
+    padding-left:5px;
+    font-family:verdana;
+    font-size:12px;
+    top:30%;
+}
+ 
+.inner a.ok {
+    padding:4px;
+    color:#00ff2e;
+    text-decoration:none;
+}
+ 
+.inner a.info {
+    padding-left:5px;
+    text-decoration:none;
+    color:#faff00;
+}
+/********fin cookies************/
 section.best-quality {
     background-color: #C7AB84;
     text-align: center;
@@ -505,7 +577,7 @@ ul.callbacks_tabs.callbacks1_tabs {
     color: #C7AB84;
 }
 
-/*pagos */
+/************pagos ***********/
 .aceptamos{
 	padding: 15px;
 }
@@ -1045,7 +1117,10 @@ h2.hd{
 }
 /*--responsive-starts-here--*/
 @media only screen and (max-width: 1024px){
-		
+	
+	.carousel-caption {
+    bottom: -11%; 
+}	
     .carousel-caption h3 {
         font-size: 18px;
     }
@@ -1087,6 +1162,7 @@ h2.hd{
         margin: 4px;
     }
 }
+/*estilos para pantallas con un maximo de 991px*/
 @media only screen and (max-width: 991px){
 	
 	/*buscador */
@@ -1108,11 +1184,15 @@ h2.hd{
     ul.social {
         padding: 0px 8px;
     }
+    .carousel-caption {
+    bottom: 4%; 
+}	
     .carousel-caption h3 {
         font-size: 15px;
     }
     .carousel-caption {
         padding: 35px;
+        bottom: 3%;
     }
     .adress ul li {
         font-size: 16px;
@@ -1211,6 +1291,7 @@ h2.hd{
         padding: 0em 0em 3em;
     }
 }
+/*estilos para pantallas con un maximo de 767px*/
 @media only screen and (max-width: 767px){
     .nav-min-wid {
         width: 100% !important;
@@ -1289,16 +1370,19 @@ h2.hd{
         padding: 12px 0px 0px 0px;
     }
 }
+/*estilos para pantallas con un maximo de 667px*/
 @media only screen and (max-width: 667px){
     .navbar-brand {
         padding: 12px 0px 0px 25px;
     }
   }
+  /*estilos para pantallas con un maximo de 736px*/
 @media only screen and (max-width: 736px){
     .navbar-brand {
         padding: 12px 0px 0px 25px;
     }
 }
+/*estilos para pantallas con un maximo de 480px*/
 @media only screen and (max-width: 480px){
 	 .nombreEmpresa h1 a {
     font-size: 0.7em;
@@ -1311,6 +1395,7 @@ h2.hd{
 	.navbar{
 	position: static;
 	}
+	
     .carousel-caption h3 {
         font-size: 13.5px;
         line-height: 1.8em;
@@ -1319,6 +1404,7 @@ h2.hd{
         background: rgba(106, 67, 28, 0.66);
         right: 13%;
         left: 13%;
+         bottom: 4%; 
     }
     .btn-quality {
         margin-left: 1em;
@@ -1360,6 +1446,7 @@ h2.hd{
         padding: 20px;
     }
 }
+/*estilos para pantallas con un maximo de 414px*/
 @media only screen and (max-width: 414px){
       
     .nav-min-wid{
@@ -1370,7 +1457,7 @@ h2.hd{
     }
     .carousel-caption {
         padding: 12px;
-        bottom: 20%;
+        bottom: -7%;
         right: 7%;
         left: 7%;
     }
@@ -1472,11 +1559,12 @@ h2.hd{
         padding: 12px 0px 0px 0px;
     }
 }
+/*estilos para pantallas con un maximo de 320px*/
 @media only screen and (max-width: 320px){
 	 
     .carousel-caption {
         padding: 7px;
-        bottom: 28%;
+        bottom: 2%;
         right: 2%;
         left: 2%;
     }
