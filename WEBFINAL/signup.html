@@ -25,392 +25,377 @@ Descripcion= Página contacto que contiene el formulario
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>HandsMade</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords"
-	content="Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript">
+    <title>HandsMade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords"
+          content="Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
+    <script type="application/x-javascript">
 
-    addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
-
-</script>
-<!--fonts-->
-
-<!--fonts-->
-<link rel="stylesheet" href="css/lightbox.css" type="text/css"
-	media="all" />
-<!--owl-cssNO EXISTE!!!!-->
-<!-- <link href="css/owl.carousel.css" rel="stylesheet"> -->
-<!--bootstrap-->
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<!--coustom css-->
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<!--default-js-->
-<script src="js/jquery-2.1.4.min.js"></script>
-<!--menu_jqueryLogin-js-->
-<script src="js/menu_jqueryLogin.js"></script>
-<!--bootstrap-js-->
-<script src="js/bootstrap.min.js"></script>
-<!--script-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-	<script type="text/javascript" src="js/registro.js"></script>
-
-    <style type="text/css">
-        div.regist-rigth input{
-            margin-top: 1em;
-            margin-bottom: 1em;
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+        function hideURLbar() {
+            window.scrollTo(0, 1);
         }
-        #registrar{
-			background: #C7AB84;
-			color: #fff;
-			font-size: 1em;
-			padding: 5px 20px;
-			border: 1px solid #C7AB84;
-			transition: all .5s;
-			-webkit-transition: all .5s;
-			-moz-transition: all .5s;
-			-o-transition: all .5s;
-        }
-		div.reg{
-			padding-top: 2em;
-		}
-		div#regMen{
-			text-align: center;
-		}
-        div#menPrin, div#mensajePHP{
-            text-align: center;
-        }
-    </style>
 
+    </script>
+    <!--fonts-->
+
+    <!--fonts-->
+    <link rel="stylesheet" href="css/lightbox.css" type="text/css"
+          media="all"/>
+    <!--owl-cssNO EXISTE!!!!-->
+    <!-- <link href="css/owl.carousel.css" rel="stylesheet"> -->
+    <!--bootstrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <!--default-js-->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <!--menu_jqueryLogin-js-->
+    <script src="js/menu_jqueryLogin.js"></script>
+    <!--bootstrap-js-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--script-->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript" src="js/registro.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 <!--body-->
 <body>
 <input type="hidden" id="sess_var" value="<?php echo 'Water Melon'; ?>"/>
+<!-------------Header---------------->
 
-		<!-------------Header---------------->
+<div class="container">
+    <div class="row">
+        <header>
+            <div class="logo col-xs-6 col-sm-6 col-md-3">
+                <a href="index.html"> <img src="images/logo (3).png"
+                                           class="animated  hinge img-responsive ">
+                </a>
+            </div>
+            <div class="nombreEmpresa col-xs-6 col-sm-6 col-md-6">
+                <h1>
+                    <a href="index.html"><span>Hands</span>Made</a>
+                </h1>
 
-	<div class="container">
-		<div class="row">
+            </div>
+            <div class="todo col-xs-12 col-sm-12 col-md-3">
+                <div class="row rowTranslate">
+                </div>
+                <div class="row" id="registerLogin">
+                    <div class=" col-xs-12 col-sm-12 col-md-12">
+                        <div class="dropdown-grids">
+                            <div id="loginContainer">
+                                <a id="loginButton"><span>Login</span></a>
+                                <div style="display: none;" id="loginBox">
+                                    <form id="loginForm">
+                                        <div class="login-grids">
+                                            <div class="login-grid-left">
+                                                <fieldset id="body">
+                                                    <fieldset>
+                                                        <label for="loginup">Login</label> <input
+                                                            name="loginup" id="loginup" type="text">
+                                                    </fieldset>
+                                                    <fieldset>
+                                                        <label for="password">Password</label> <input
+                                                            name="password" id="password" type="password">
+                                                    </fieldset>
+                                                </fieldset>
+                                                <div id="errorLogin" style="color: red;"></div>
+                                                <input id="login" value="Sign in" type="button" onclick="openSession()">
+                                                <div class="or-grid">
+                                                    <p>OR</p>
+                                                </div>
+                                                <div class="social-sits">
+                                                    <div class="facebook-button">
+                                                        <a id="loginFace" href="#">Connect with Facebook</a>
+                                                    </div>
 
-			<header>
-				<div class="logo col-xs-12 col-md-3">
-					<a href="index.html"> <img src="images/logo (3).png"
-						class="animated  hinge img-responsive ">
-					</a>
-				</div>
-				<div class="nombreEmpresa col-xs-6 col-md-6">
-					<h1>
-						<a href="index.html"><span>Hands</span>Made</a>
-					</h1>
+                                                    <div class="button-bottom">
+                                                        <p>
+                                                            New account? <a href="signup.html">Signup</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="logActive" class="row"></div>
+                <div class="row rowSearch">
+                    <div class="search col-xs-9 col-sm-9 col-md-9">
 
-				</div>
-				<div class="todo col-xs-12 col-md-3">
-					<div class="row rowTranslate">
+                        <form method="post" action="search.html">
+                            <input type="text" name="query" id="query" placeholder="Search…"
+                                   autocomplete="off" value="">
+                        </form>
+                    </div>
+                    <div class="mini-cart col-xs-col-sm-2 col-md-1">
+                        <!-- Mini cart -->
+                        <a href="cart.html" title="Go to cart →"> <span>3</span>
+                        </a>
+                        <!-- End class="mini-cart" -->
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
 
-						<div class="traslate col-xs-7 col-md-12">
-							<!-- traslate -->
-							<a href="#" title="page traslate ">English page </a>
+<!----------Fin header--------------->
 
-							<!-- End traslate -->
-						</div>
-					</div>
-					<div class="row">
+<!-----------Menu de navegacion------------->
 
-						<div class=" col-xs-6 col-md-12">
-							<div class="dropdown-grids">
-								<div id="loginContainer">
-									<a id="loginButton"><span>Login</span></a>
-									<div style="display: none;" id="loginBox">
-										<form id="loginForm">
-											<div class="login-grids">
-												<div class="login-grid-left">
-													<fieldset id="body">
-														<fieldset>
-															<label for="email">Email Address</label> <input
-																name="email" id="email" type="text">
-														</fieldset>
-														<fieldset>
-															<label for="password">Password</label> <input
-																name="password" id="password" type="password">
-														</fieldset>
-														<input id="login" value="Sign in" type="submit"> <label
-															for="checkbox"><input id="checkbox"
-															type="checkbox"> <i>Remember me</i></label>
-													</fieldset>
-													<span><a href="#">Forgot your password?</a></span>
-													<div class="or-grid">
-														<p>OR</p>
-													</div>
-													<div class="social-sits">
-														<div class="facebook-button">
-															<a href="#">Connect with Facebook</a>
-														</div>
-														<div class="chrome-button">
-															<a href="#">Connect with Google</a>
-														</div>
-														<div class="button-bottom">
-															<p>
-																New account? <a href="signup.html">Signup</a>
-															</p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row rowSearch">
-						<div class="search col-xs-12 col-md-9">
+<nav class="navbar navbar-default nav-dflt-setin">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header nav-min-wid">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+            <h1>
+                <a class="navbar-brand" href="index.html"></a>
+            </h1>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse "
+             id="bs-example-navbar-collapse-1">
 
-							<form method="post" action="search.html">
-								<input type="text" name="query" id="query" placeholder="Search…"
-									autocomplete="off" value="">
-							</form>
-						</div>
-						<div class="mini-cart col-xs-7 col-md-1">
-							<!-- Mini cart -->
-							<a href="cart.html" title="Go to cart →"> <span>3</span>
-							</a>
-							<!-- End class="mini-cart" -->
-						</div>
-					</div>
-				</div>
-			</header>
-		</div>
-	</div>
+            <ul class="nav navbar-nav nav-max-wid cl-effect-5" id="cl-effect-5">
+                <li><a href="index.html"><span data-hover="Inicio">Inicio</span></a></li>
+                <li><a href="tienda.html"><span data-hover="Tienda">Tienda</span></a></li>
+                <li><a href="galeria.html"><span data-hover="Galeria">Galeria</span></a></li>
+                <li><a href="nosotros.html"><span data-hover="Nosotros">Nosotros</span></a></li>
+                <li><a href="contacto.html"><span data-hover="Contacto">Contacto</span></a></li>
+                <li><a href="carrito.html"><span data-hover="Carrito">Carrito</span></a></li>
+            </ul>
 
-	<!----------Fin header--------------->
+        </div>
+        <!-- /.navbar-collapse -->
+        <div class="clearfix"></div>
+    </div>
+    <!-- /.container-fluid -->
+</nav>
 
-	<!-----------Menu de navegacion------------->
-	
-			<nav class="navbar navbar-default nav-dflt-setin">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header nav-min-wid">
-						<button type="button" class="navbar-toggle collapsed"
-							data-toggle="collapse"
-							data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span> <span
-								class="icon-bar"></span> <span class="icon-bar"></span> <span
-								class="icon-bar"></span>
-						</button>
-						<h1>
-							<a class="navbar-brand" href="index.html"></a>
-						</h1>
-					</div>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse "
-						id="bs-example-navbar-collapse-1">
+<!--fin del menu de navegacion-->
 
-						<ul class="nav navbar-nav nav-max-wid cl-effect-5"
-							id="cl-effect-5">
-							<li><a href="index.html"><span data-hover="Inicio">Inicio</span></a></li>
-									<li><a href="services.html"><span data-hover="Tienda">Tienda</span></a></li>
-										<li><a href="gallery.html"><span data-hover="Galeria">Galeria</span></a></li>
-							<li><a href="about.html"><span data-hover="Nosotros">Nosotros</span></a></li>
-							<li><a href="contacto.html"><span data-hover="Contacto">Contacto</span></a></li>
-							<li><a href="carrito.html"><span data-hover="Carrito">Carrito</span></a></li>
-						</ul>
+<!-- Registro -->
 
-					</div>
-					<!-- /.navbar-collapse -->
-					<div class="clearfix"></div>
-				</div>
-				<!-- /.container-fluid -->
-			</nav>
-		
-	<!--fin del menu de navegacion-->
+<div class="contact">
+    <div class="container">
+        <h2>Registro</h2>
+        <form action="php/registrar.php" method="POST">
 
-    <!-- Registro -->
+            <!-- Mensaje de aviso de errores devueltos por el servidor -->
+            <div id="mensajePHP" class="col-sm-12 col-xs-12">
+            </div>
 
-    <div class="contact">
+            <!-- Mensaje de aviso de campos obligatorios -->
+            <div id="menPrin" class="col-sm-12 col-xs-12">
+                Los campos obligatorios estan marcados con el simbolo *
+            </div>
+
+            <div class="col-sm-3 col-xs-12 regist-left"></div>
+            <div class="col-sm-9 col-xs-12 regist-rigth">
+
+                <!-- Login -->
+                <div class="col-sm-12 col-xs-12 reglab">
+                    <label for="log">Login*</label>
+                </div>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="text" id="log" name="log" class="name-con" placeholder="Login">
+                </div>
+                <div class="col-sm-3 col-xs-3 error" id="errorLog">
+                </div>
+
+                <!-- Password -->
+                <div class="col-sm-12 col-xs-12 reglab">
+                    <label for="pass">Password*</label>
+                </div>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="password" id="pass" name="pass" class="name-con" placeholder="Password">
+                </div>
+                <div class="col-sm-3 col-xs-3" id="errorPass">
+                </div>
+
+                <!-- Password Confirmacion -->
+                <div class="col-sm-12 col-xs-12 reglab">
+                    <label for="passConf">Confirmar Password*</label>
+                </div>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="password" id="passConf" name="passConf" class="name-con"
+                           placeholder="Confirmar Password">
+                </div>
+                <div class="col-sm-3 col-xs-3" id="errorConf">
+                </div>
+
+                <!-- Nombre -->
+                <div class="col-sm-12 col-xs-12 reglab">
+                    <label for="nombre">Nombre*</label>
+                </div>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="text" id="nombre" name="nombre" class="name-con" placeholder="Nombre">
+                </div>
+                <div class="col-sm-3 col-xs-3" id="errorNombre">
+                </div>
+
+                <!-- Apellidos -->
+                <div class="col-sm-12 col-xs-12 reglab">
+                    <label for="apellidos">Apellidos*</label>
+                </div>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="text" id="apellidos" name="apellidos" class="name-con" placeholder="Apellidos">
+                </div>
+                <div class="col-sm-3 col-xs-3" id="errorApe">
+                </div>
+
+                <!-- DNI -->
+                <div class="col-sm-12 col-xs-12 reglab">
+                    <label for="dni">D.N.I.*</label>
+                </div>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="text" id="dni" name="dni" class="name-con" placeholder="D.N.I.">
+                </div>
+                <div class="col-sm-3 col-xs-3" id="errorDni">
+                </div>
+
+                <!-- Email -->
+                <div class="col-sm-12 col-xs-12 reglab">
+                    <label for="e-mail">Email*</label>
+                </div>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="text" id="e-mail" name="e-mail" class="name-con" placeholder="ejemplo@ejemplo.com">
+                </div>
+                <div class="col-sm-3 col-xs-3" id="errorEmail">
+                </div>
+
+                <!-- Dirección -->
+                <div class="col-sm-12 col-xs-12 reglab">
+                    <label for="direccion">Direccion*</label>
+                </div>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="text" id="direccion" name="direccion" class="name-con" placeholder="C/...">
+                </div>
+                <div class="col-sm-3 col-xs-3" id="errorDir">
+                </div>
+
+                <!-- Telefono 1 -->
+                <div class="col-sm-12 col-xs-12 reglab">
+                    <label for="telefono1">Teléfono 1*</label>
+                </div>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="text" id="telefono1" name="telefono1" class="name-con" placeholder="(9/6)00 000 000">
+                </div>
+                <div class="col-sm-3 col-xs-3" id="errorTel1">
+                </div>
+
+                <!-- Teléfono 2 -->
+                <div class="col-sm-12 col-xs-12 reglab">
+                    <label for="telefono2">Telefono 2</label>
+                </div>
+                <div class="col-sm-9 col-xs-9">
+                    <input type="text" id="telefono2" name="telefono2" class="name-con" placeholder="(9/6)00 000 000">
+                </div>
+                <div class="col-sm-3 col-xs-3" id="errorTel2">
+                </div>
+            </div>
+            <!-- Mensaje dinamico de aviso de campos obligatorios sin rellenar o campos rellenados -->
+            <div class="col-sm-12 col-xs-12" id="regMen">
+                Rellene todos los campos obligatorios correctamente y pulse "Registrar"
+            </div>
+            <div class="col-sm-12 col-xs-12 reg">
+                <center>
+                    <input type="submit" id="registrar" name="registro" id="registro" value="Registrar"
+                           disabled="disabled">
+                </center>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Fin de Registro -->
+
+
+<!--footer-->
+<div class="footer">
+    <div class="ft-top">
         <div class="container">
-            <h2>Registro</h2>
-            <form action="php/registrar.php" method="POST">
-
-				<!-- Mensaje de aviso de errores devueltos por el servidor -->
-				<div id="mensajePHP"  class="col-sm-12 col-xs-12">
-					Los campos obligatorios estan marcados con el simbolo *
-				</div>
-
-                <!-- Mensaje de aviso de campos obligatorios -->
-                <div id="menPrin"  class="col-sm-12 col-xs-12">
-                    Los campos obligatorios estan marcados con el simbolo *
-                </div>
-
-                <div class="col-sm-3 col-xs-12 regist-left"></div>
-                <div class="col-sm-9 col-xs-12 regist-rigth">
-
-                    <!-- Login -->
-                    <div class="col-sm-12 col-xs-12 reglab">
-                        <label for="log">Login*</label>
-                    </div>
-                    <div class="col-sm-9 col-xs-9">
-                        <input type="text" id="log" name="log" class="name-con" placeholder="Login">
-                    </div>
-                    <div class="col-sm-3 col-xs-3 error" id="errorLog">
-                    </div>
-
-                    <!-- Password -->
-                    <div class="col-sm-12 col-xs-12 reglab">
-                        <label for="pass">Password*</label>
-                    </div>
-                    <div class="col-sm-9 col-xs-9">
-                        <input type="password" id="pass" name="pass" class="name-con" placeholder="Password">
-                    </div>
-                    <div class="col-sm-3 col-xs-3" id="errorPass">
-                    </div>
-
-                    <!-- Password Confirmacion -->
-                    <div class="col-sm-12 col-xs-12 reglab">
-                        <label for="passConf">Confirmar Password*</label>
-                    </div>
-                    <div class="col-sm-9 col-xs-9">
-                        <input type="password" id="passConf" name="passConf" class="name-con" placeholder="Confirmar Password">
-                    </div>
-                    <div class="col-sm-3 col-xs-3" id="errorConf">
-                    </div>
-
-                    <!-- Nombre -->
-                    <div class="col-sm-12 col-xs-12 reglab">
-                        <label for="nombre">Nombre*</label>
-                    </div>
-                    <div class="col-sm-9 col-xs-9">
-                        <input type="text" id="nombre" name="nombre" class="name-con" placeholder="Nombre">
-                    </div>
-                    <div class="col-sm-3 col-xs-3" id="errorNombre">
-                    </div>
-
-                    <!-- Apellidos -->
-                    <div class="col-sm-12 col-xs-12 reglab">
-                        <label for="apellidos">Apellidos*</label>
-                    </div>
-                    <div class="col-sm-9 col-xs-9">
-                        <input type="text" id="apellidos" name="apellidos" class="name-con" placeholder="Apellidos">
-                    </div>
-                    <div class="col-sm-3 col-xs-3" id="errorApe">
-                    </div>
-
-                    <!-- DNI -->
-                    <div class="col-sm-12 col-xs-12 reglab">
-                        <label for="dni">D.N.I.*</label>
-                    </div>
-                    <div class="col-sm-9 col-xs-9">
-                        <input type="text" id="dni" name="dni" class="name-con" placeholder="D.N.I.">
-                    </div>
-                    <div class="col-sm-3 col-xs-3" id="errorDni">
-                    </div>
-
-                    <!-- Email -->
-                    <div class="col-sm-12 col-xs-12 reglab">
-                        <label for="e-mail">Email*</label>
-                    </div>
-                    <div class="col-sm-9 col-xs-9">
-                        <input type="text" id="e-mail" name="e-mail" class="name-con" placeholder="ejemplo@ejemplo.com">
-                    </div>
-                    <div class="col-sm-3 col-xs-3" id="errorEmail">
-                    </div>
-
-                    <!-- Dirección -->
-                    <div class="col-sm-12 col-xs-12 reglab">
-                        <label for="direccion">Direccion*</label>
-                    </div>
-                    <div class="col-sm-9 col-xs-9">
-                        <input type="text" id="direccion" name="direccion" class="name-con" placeholder="C/...">
-                    </div>
-                    <div class="col-sm-3 col-xs-3" id="errorDir">
-                    </div>
-
-                    <!-- Telefono 1 -->
-                    <div class="col-sm-12 col-xs-12 reglab">
-                        <label for="telefono1">Teléfono 1*</label>
-                    </div>
-                    <div class="col-sm-9 col-xs-9">
-                        <input type="text" id="telefono1" name="telefono1" class="name-con" placeholder="(9/6)00 000 000">
-                    </div>
-                    <div class="col-sm-3 col-xs-3" id="errorTel1">
-                    </div>
-
-                    <!-- Teléfono 2 -->
-                    <div class="col-sm-12 col-xs-12 reglab">
-                        <label for="telefono2">Telefono 2</label>
-                    </div>
-                    <div class="col-sm-9 col-xs-9">
-                        <input type="text" id="telefono2" name="telefono2" class="name-con" placeholder="(9/6)00 000 000">
-                    </div>
-                    <div class="col-sm-3 col-xs-3" id="errorTel2">
-                    </div>
-                </div>
-                <!-- Mensaje dinamico de aviso de campos obligatorios sin rellenar o campos rellenados -->
-				<div class="col-sm-12 col-xs-12" id="regMen">
-					Rellene todos los campos obligatorios correctamente y pulse "Registrar"
-				</div>
-				<div class="col-sm-12 col-xs-12 reg">
-					<center>
-					<input type="submit" id="registrar" name="registro" id="registro" value="Registrar">
-					</center>
-				</div>
-            </form>
+            <div class="linksFooter col-xs-12 col-md-3">
+                <ul>
+                    <li><a href="#" class="">Trabaja con nosotros</a></li>
+                    <li><a href="nosotros.html" class="">Nosotros</a></li>
+                    <li><a href="contacto.html" class="">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="linksFooter col-xs-12 col-md-3">
+                <ul>
+                    <li><a href="signup.html" class="">Registro</a></li>
+                    <li><a href="politica.html" class="">Politica de privacidad</a></li>
+                    <li><a href="cookies.html" class="">Cookies</a></li>
+                </ul>
+            </div>
+            <div class="aceptamos col-xs-12 col-md-3">
+                <ul>
+                    <li><img
+                            src="https://static.wixstatic.com/media/cda177_66112d8828944365b8a0fb3f95e423a0.png/v1/fill/w_32,h_20,al_c,usm_0.66_1.00_0.01/cda177_66112d8828944365b8a0fb3f95e423a0.png" /></li>
+                    <li><img
+                            src="https://static.wixstatic.com/media/cda177_0292d75330eb4c46819ebd76e2b71edd.png/v1/fill/w_34,h_22,al_c,usm_0.66_1.00_0.01/cda177_0292d75330eb4c46819ebd76e2b71edd.png" /></li>
+                    <li><img
+                            src="https://static.wixstatic.com/media/cda177_ae6aa613f4e049c697544cc8c8375ea2.png/v1/fill/w_33,h_21,al_c,usm_0.66_1.00_0.01/cda177_ae6aa613f4e049c697544cc8c8375ea2.png" /></li>
+                    <li><img
+                            src="https://static.wixstatic.com/media/cda177_91a1dcd4c6d44674acf4a562b09838f6.png/v1/fill/w_35,h_22,al_c,usm_0.66_1.00_0.01/cda177_91a1dcd4c6d44674acf4a562b09838f6.png" /></li>
+                </ul>
+            </div>
+            <div class="social-media col-xs-12 col-md-3">
+                <ul>
+                    <li><a target="_blank" href="https://www.facebook.com/" class="ftfb"></a></li>
+                    <li><a target="_blank" href="https://twitter.com/" class="fttwt"></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/" class="ftinst"></a></li>
+                    <li><a target="_blank" href="https://accounts.google.com/ServiceLogin?" class="ftdrib"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ft-bottom">
+        <div class="container">
+            <p>RubenRodriguez | YesicaRojas | NassimBoussaidi</p>
         </div>
     </div>
 
-    <!-- Fin de Registro -->
+    <!-- script para el triangulo que lleva al header -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+             var defaults = {
+             containerID: 'toTop', // fading element id
+             containerHoverID: 'toTopHover', // fading element hover id
+             scrollSpeed: 1200,
+             easingType: 'linear'
+             };
+             */
 
+            $().UItoTop({
+                easingType : 'easeOutQuart'
+            });
 
-		<!--footer-->
-		<div class="footer">
-			<div class="ft-top">
-				<div class="container">
-					<div class="linksFooter col-xs-12 col-md-3">
-						<ul>
-							<li><a href="#" class="">Empresa</a></li>
-							<li><a href="#" class="">laalalalallalaalal</a></li>
-							<li><a href="#" class="">lalallalal</a></li>
-							<li><a href="#" class="">leleleleelleleleleleelel</a></li>
-						</ul>
-					</div>
-					<div class="linksFooter col-xs-12 col-md-3">
-						<ul>
-						<li><a href="#" class="">tititututytytyyty</a></li>
-							<li><a href="#" class="">laalala</a></li>
-							<li><a href="#" class="">laladdddddllalal</a></li>
-							<li><a href="#" class="">laaaaaeleleleel</a></li>
-						</ul>
-					</div>
-					<div class="aceptamos col-xs-12 col-md-3">
-						<ul>
-							<li><img src="https://static.wixstatic.com/media/cda177_66112d8828944365b8a0fb3f95e423a0.png/v1/fill/w_32,h_20,al_c,usm_0.66_1.00_0.01/cda177_66112d8828944365b8a0fb3f95e423a0.png"/></li>
-								<li><img src="https://static.wixstatic.com/media/cda177_0292d75330eb4c46819ebd76e2b71edd.png/v1/fill/w_34,h_22,al_c,usm_0.66_1.00_0.01/cda177_0292d75330eb4c46819ebd76e2b71edd.png"/></li>
-								<li><img src="https://static.wixstatic.com/media/cda177_ae6aa613f4e049c697544cc8c8375ea2.png/v1/fill/w_33,h_21,al_c,usm_0.66_1.00_0.01/cda177_ae6aa613f4e049c697544cc8c8375ea2.png"/></li>
-								<li><img src="https://static.wixstatic.com/media/cda177_91a1dcd4c6d44674acf4a562b09838f6.png/v1/fill/w_35,h_22,al_c,usm_0.66_1.00_0.01/cda177_91a1dcd4c6d44674acf4a562b09838f6.png"/></li>
-						</ul>
-					</div>
-					<div class="social-media col-xs-12 col-md-3">
-						<ul>
-							<li><a href="#" class="ftfb"></a></li>
-							<li><a href="#" class="fttwt"></a></li>
-							<li><a href="#" class="ftinst"></a></li>
-							<li><a href="#" class="ftdrib"></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="ft-bottom">
-				<div class="container">
-					<p>All Rights Reserved 2016. Design By yesicaRojas.</p>
-				</div>
-			</div>
-
-			<a href="#" id="toTop" class="scroll" style="display: block;">
-				<span id="toTopHover" style="opacity: 1;"> </span>
-			</a>
-		</div>
-		<!--Fin del footer-->
+        });
+    </script>
+    <a href="#home" id="toTop" class="scroll" style="display: block;">
+        <span id="toTopHover" style="opacity: 1;"> </span>
+    </a>
+</div>
+<!--Fin del footer-->
 </body>
 <!--body-->
 </html>

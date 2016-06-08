@@ -1763,7 +1763,7 @@ ul, label {
 }
 /*carrito de la compra*/
 .mini-cart {
-	padding: 17px 32px;
+	_padding: 17px 32px;
     _position: relative;
     top: 0px;
     _right: 135px;
@@ -1800,7 +1800,54 @@ ul, label {
     border-radius: 12px;
     background-clip: padding-box;
 }
-/*orde redondeado de los botones*/
+/*borde redondeado de los botones*/
 .btn{
 	border-radius: 0px; 
+}
+/* Style to new buttons */
+.newButton{
+    position: relative;
+    padding: 0.5em 0em;
+    border: solid 1px #C7AB84;
+    background: #C7AB84;
+    color: white;
+    width: 120px;
+    height: 35px;
+    margin-left: 10%;
+}
+div.regist-rigth input{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#registrar{
+    background: #C7AB84;
+    color: #fff;
+    font-size: 1em;
+    padding: 5px 20px;
+    border: 1px solid #C7AB84;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+}
+div.reg{
+    padding-top: 2em;
+}
+div#regMen{
+    text-align: center;
+}
+div#menPrin, div#mensajePHP{
+    text-align: center;
+}
+
+/* Active Login */
+#logActive button{
+    margin-left: 15%;
+}
+
+/* Estilos Thanks */
+
+div#thanks {
+    font-size: 4em;
+    text-align: center;
 }
