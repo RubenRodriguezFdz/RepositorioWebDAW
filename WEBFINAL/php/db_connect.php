@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
 $db_name = "handsmade";
-$username = "root";
-$password = "";
+$username = "homestead";
+$password = "secret";
  
 try {
     $con = new PDO("mysql:host={$host};dbname={$db_name}", $username, $password);
