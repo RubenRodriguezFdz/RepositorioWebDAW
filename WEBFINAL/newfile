@@ -1,0 +1,20 @@
+INSERT INTO productos (nombre_prod, categoria_prod, material_prod, precio_prod)
+VALUES 
+('Bolso cuero', 'accesorios', 'cuero', 19.99),
+('Funda gafas', 'accesorios', 'cuero', 9.99),
+('Pendientes pandora', 'accesorios', 'plastico', 5.99),
+('Pendientes dorados', 'accesorios', 'metal', 11.99),
+('Pulsera reloj', 'accesorios', 'cuero', 25.00),
+('Anillo cuero', 'accesorios', 'cuero', 4.99),
+('Cartera cuero', 'accesorios', 'cuero', 9.99),
+('Funda movil', 'accesorios', 'cuero', 7.99),
+('Juego Pendientes/Anillo', 'accesorios', 'cuero/plastico', 19.99),
+('Mochila', 'accesorios', 'tela', 16.00),
+('Fundas movil', 'accesorios', 'cuero', 9.99),
+('Cuadro madera', 'hogar', 'madera', 19.50),
+('Portavelas', 'hogar', 'reciclado', 3.99),
+('Decoracion habitación', 'hogar', 'completo', 259.99),
+('Perchero madera', 'hogar', 'madera', 29.99),
+('Estanteria', 'hogar', 'madera', 94.99),
+('Juego botellas', 'hogar', 'cristal', 29.99),
+('Estantería panal', 'hogar', 'madera', 24.99);

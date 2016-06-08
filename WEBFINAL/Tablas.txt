@@ -1,0 +1,61 @@
+CREATE DATABASE handsmade;
+
+USE handsmade;
+
+CREATE TABLE clientes (
+id_user INT NOT NULL AUTO_INCREMENT,
+login varchar(45) NOT NULL,
+pass varchar(45) NOT NULL,
+dni char(9) NOT NULL,
+nombre CHAR(25) NOT NULL,
+apellidos CHAR(45) NOT NULL,
+email CHAR(30) NOT NULL,
+direccion varchar(100) NOT NULL,
+telefono1 INT (9)NOT NULL,
+telefono2 INT(9),
+PRIMARY KEY (id_user, login)
+)DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+CREATE TABLE productos (
+id_prod INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nombre_prod varchar(45) NOT NULL,
+categoria_prod varchar(45) NOT NULL,
+material_prod varchar(45) NOT NULL,
+precio_prod DEC(6,2) NOT NULL
+)DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+INSERT INTO productos (nombre_prod, categoria_prod, material_prod, precio_prod)
+VALUES 
+('Bolso cuero', 'accesorios', 'cuero', 19.99),
+('Funda gafas', 'accesorios', 'cuero', 9.99),
+('Pendientes pandora', 'accesorios', 'plastico', 5.99),
+('Pendientes dorados', 'accesorios', 'metal', 11.99),
+('Pulsera reloj', 'accesorios', 'cuero', 25.00),
+('Anillo cuero', 'accesorios', 'cuero', 4.99),
+('Cartera cuero', 'accesorios', 'cuero', 9.99),
+('Funda movil', 'accesorios', 'cuero', 7.99),
+('Juego Pendientes/Anillo', 'accesorios', 'cuero/plastico', 19.99),
+('Mochila', 'accesorios', 'tela', 16.00),
+('Fundas movil', 'accesorios', 'cuero', 9.99),
+('Cuadro madera', 'hogar', 'madera', 19.50),
+('Portavelas', 'hogar', 'reciclado', 3.99),
+('Decoracion habitaci�n', 'hogar', 'completo', 259.99),
+('Perchero madera', 'hogar', 'madera', 29.99),
+('Estanteria', 'hogar', 'madera', 94.99),
+('Juego botellas', 'hogar', 'cristal', 29.99),
+('Estanter�a panal', 'hogar', 'madera', 24.99);
+
+CREATE TABLE pedidos (
+id_pedido INT(3) NOT NULL PRIMARY KEY,
+id_user INT(3) NOT NULL,
+FOREIGN KEY (id_user) REFERENCES clientes(id_user)
+)DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+CREATE TABLE facturas (
+id_pedido INT(3) NOT NULL,
+id_prod INT(3) NOT NULL,
+cantidad INT(3) NOT NULL,
+PRIMARY KEY (id_pedido, id_prod),
+FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido),
+FOREIGN KEY (id_prod) REFERENCES productos(id_prod)
+)DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;

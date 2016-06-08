@@ -25,12 +25,15 @@
  */
 
 require_once 'registro.php';
+require_once 'login.php';
+require_once 'session.php';
 
 Class Registrar {
 
-    public function registro (){
+    public function registro ()
+    {
 
-        $mensaje ='';
+        $mensaje = '';
 
         $registro = new Registro();
 
@@ -43,10 +46,49 @@ Class Registrar {
         $email = $_POST['e-mail'];
         $direccion = $_POST['direccion'];
         $telefono1 = $_POST['telefono1'];
-        if ($_POST['telefono2']){
+        if ($_POST['telefono2']) {
             $telefono2 = $_POST['telefono2'];
-        }else{
-            $telefono2="";
+        } else {
+            $telefono2 = "";
+        }
+
+        // Validación de datos
+        // Validación de DNI
+        if (!preg_match("/^[0-9]{7,8}[a-zA-Z]$/", $dni)) {
+            header('Location: ../signup.html?mensaje=campoErroneo');
+            exit;
+        }
+        // Validación de nombre
+        if (!preg_match("/^[A-Za-záÁéÉíÍóÓúÚñÑ]{1}[A-Z a-z áÁéÉíÍóÓúÚñÑ]*$/", $nombre)) {
+            header('Location: ../signup.html?mensaje=campoErroneo');
+            exit;
+        }
+        // Validación de apellidos
+        if (!preg_match("/^[A-Za-záÁéÉíÍóÓúÚñÑ]{1}[A-Z a-z áÁéÉíÍóÓúÚñÑ]*$/", $apellidos)) {
+            header('Location: ../signup.html?mensaje=campoErroneo');
+            exit;
+        }
+        // Validación de email
+        if (!preg_match("/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/", $email)) {
+            header('Location: ../signup.html?mensaje=campoErroneo');
+            exit;
+        }
+        // Validación de dirección
+        if ($direccion === "") {
+            header('Location: ../signup.html?mensaje=campoErroneo');
+            exit;
+        }
+        // Validación de telefono 1
+        if (!preg_match("/^[9|6][0-9]{8}$/", $telefono1)) {
+            header('Location: ../signup.html?mensaje=campoErroneo');
+            exit;
+        }
+        // Validación de telefono 2
+        if ($telefono2 !== "") {
+            if (!preg_match("/^[9|6][0-9]{8}$/", $telefono2)) {
+                header('Location: ../signup.html?mensaje=campoErroneo');
+                exit;
+            }
         }
 
         //Se define el array de campos a introducir en la basa de datos
@@ -62,10 +104,16 @@ Class Registrar {
             "telefono2" => $telefono2,
         );
         if ($registro->load($mensaje, $campos, "clientes", "guardar")) {
+            // Éxito en el insert. Se devuelve a la página Thanks
+            $ses = new Session();
+            $ses->startSession();
+            $_SESSION['login'] = $login;
             header('Location: ../thanksRegistro.html');
+            exit;
         } else {
             //Error al introducir un nuevo usuario
             header('Location: ../signup.html?mensaje=errorUsuario');
+            exit;
         }
 
     }

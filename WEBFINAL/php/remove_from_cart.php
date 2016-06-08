@@ -1,13 +1,12 @@
 <?php
 session_start();
  
-// get the product id
+// cogemos el id del producto
 $id = isset($_GET['id']) ? $_GET['id'] : "";
-$name = isset($_GET['name']) ? $_GET['name'] : "";
  
-// remove the item from the array
+// borramos el producto del array de session
 unset($_SESSION['cart_items'][$id]);
  
-// redirect to product list and tell the user it was added to cart
-header('Location: cart.php?action=removed&id=' . $id . '&name=' . $name);
+// redirecciona al carrito y le dice que el producto ha sido borrado
+header('Location: ../carrito.html');
 ?>
