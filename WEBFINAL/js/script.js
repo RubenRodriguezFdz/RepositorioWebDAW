@@ -138,14 +138,18 @@ function setCookie(c_name,value,exdays){
     var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
     document.cookie=c_name + "=" + c_value;
 }
-
-if(getCookie('HandsMade')!="1"){
-    document.getElementById("barraaceptacion").style.display="block";
-}
+$(document).ready(function () {
+    if(getCookie('HandsMade')!="1"){
+        document.getElementById("barraaceptacion").style.display="block";
+    }else{
+        document.getElementById("barraaceptacion").style.display="none";
+    }
+});
 function PonerCookie(){
     setCookie('HandsMade','1',365);
     document.getElementById("barraaceptacion").style.display="none";
 }
+
 // FIN BLOQUE COOKIES
 
 //Se llama por defecto a la funcion erroresPHP para que se ejecute

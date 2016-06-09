@@ -44,10 +44,9 @@ VALUES
 ('Estanteria', 'hogar', 'madera', 94.99),
 ('Juego botellas', 'hogar', 'cristal', 29.99),
 ('Estantería panal', 'hogar', 'madera', 24.99);
->>>>>>> feature-nassim
 
 CREATE TABLE pedidos (
-id_pedido INT(3) NOT NULL PRIMARY KEY,
+id_pedido INT(3) NOT NULL PRIMARY KEY AUTO_INCREMEN,
 id_user INT(3) NOT NULL,
 FOREIGN KEY (id_user) REFERENCES clientes(id_user)
 )DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
