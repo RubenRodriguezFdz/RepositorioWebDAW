@@ -142,7 +142,9 @@ $(document).ready(function () {
     if(getCookie('HandsMade')!="1"){
         document.getElementById("barraaceptacion").style.display="block";
     }else{
-        document.getElementById("barraaceptacion").style.display="none";
+        if (document.getElementById("barraaceptacion")) {
+            document.getElementById("barraaceptacion").style.display = "none";
+        }
     }
 });
 function PonerCookie(){
