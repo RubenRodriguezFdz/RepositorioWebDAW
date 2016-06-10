@@ -140,7 +140,9 @@ function setCookie(c_name,value,exdays){
 }
 $(document).ready(function () {
     if(getCookie('HandsMade')!="1"){
-        document.getElementById("barraaceptacion").style.display="block";
+        if (document.getElementById("barraaceptacion")) {
+            document.getElementById("barraaceptacion").style.display = "block";
+        }
     }else{
         if (document.getElementById("barraaceptacion")) {
             document.getElementById("barraaceptacion").style.display = "none";
