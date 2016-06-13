@@ -1,0 +1,362 @@
+<!--
+Autor= Yesica Rojas, Ruben Rodriguez, Nassim Bousaidi
+Fecha= 10.junio de 2016
+Licencia=  gp130
+Version= 1.0
+Descripcion= Página contacto que contiene el formulario
+-->
+<!--
+  Copyright (C) 2016 Yesica Rojas, Ruben Rodriguez, Nassim Bousaidi
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HandsMade</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords"
+	content="Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript">
+	
+
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    
+</script>
+<!--fonts-->
+
+<!--fonts-->
+<link rel="stylesheet" href="css/lightbox.css" type="text/css"
+	media="all" />
+<!--owl-cssNO EXISTE!!!!-->
+<!-- <link href="css/owl.carousel.css" rel="stylesheet"> -->
+<!--bootstrap-->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!--coustom css-->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!--default-js-->
+<script src="js/jquery-2.1.4.min.js"></script>
+<!--menu_jqueryLogin-js-->
+<script src="js/menu_jqueryLogin.js"></script>
+<!--bootstrap-js-->
+<script src="js/bootstrap.min.js"></script>
+<!--script-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="js/registro.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</head>
+<!--body-->
+<body>
+	<!-------------Header---------------->
+
+	<div class="container">
+		<div class="row">
+			<header>
+				<div class="logo col-xs-6 col-sm-6 col-md-3">
+					<a href="index.html"> <img src="images/logo (3).png"
+						class="animated  hinge img-responsive ">
+					</a>
+				</div>
+				<div class="nombreEmpresa col-xs-6 col-sm-6 col-md-6">
+					<h1>
+						<a href="index.html"><span>Hands</span>Made</a>
+					</h1>
+
+				</div>
+				<div class="todo col-xs-12 col-sm-12 col-md-3">
+					<div class="row rowTranslate"></div>
+					<div class="row" id="registerLogin">
+						<div class=" col-xs-12 col-sm-12 col-md-12">
+							<div class="dropdown-grids">
+								<div id="loginContainer">
+									<a id="loginButton"><span>Login</span></a>
+									<div style="display: none;" id="loginBox">
+										<form id="loginForm">
+											<div class="login-grids">
+												<div class="login-grid-left">
+													<fieldset id="body">
+														<fieldset>
+															<label for="loginup">Login</label> <input name="loginup"
+																id="loginup" type="text">
+														</fieldset>
+														<fieldset>
+															<label for="password">Password</label> <input
+																name="password" id="password" type="password">
+														</fieldset>
+													</fieldset>
+													<div id="errorLogin" style="color: red;"></div>
+
+													<div id="errorLogin" style="color: red;"></div>
+													<input id="login" value="Sign in" type="button" onclick="openSession()">
+													<div class="button-bottom">
+														<p>
+															New account? <a href="signup.html">Signup</a>
+														</p>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="logActive" class="row"></div>
+					<div class="row rowSearch">
+						<div class="search col-xs-9 col-sm-9 col-md-9">
+
+							<form method="post" action="search.html">
+								<input type="text" name="query" id="query" placeholder="Search…"
+									autocomplete="off" value="">
+							</form>
+						</div>
+						<div class="mini-cart col-xs-col-sm-2 col-md-1">
+							<!-- Mini cart -->
+							<a href="cart.html" title="Ir a Carrito"> <span>3</span>
+							</a>
+							<!-- End class="mini-cart" -->
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+	</div>
+
+	<!----------Fin header--------------->
+
+	<!-----------Menu de navegacion------------->
+
+	<nav class="navbar navbar-default nav-dflt-setin">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header nav-min-wid">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<h1>
+					<a class="navbar-brand" href="index.html"></a>
+				</h1>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse "
+				id="bs-example-navbar-collapse-1">
+
+				<ul class="nav navbar-nav nav-max-wid cl-effect-5" id="cl-effect-5">
+					<li><a href="index.html"><span data-hover="Inicio">Inicio</span></a></li>
+					<li><a href="tienda.html"><span data-hover="Tienda">Tienda</span></a></li>
+					<li><a href="galeria.html"><span data-hover="Galeria">Galeria</span></a></li>
+					<li><a href="nosotros.html"><span data-hover="Nosotros">Nosotros</span></a></li>
+					<li><a href="contacto.html"><span data-hover="Contacto">Contacto</span></a></li>
+					<li><a href="carrito.html"><span data-hover="Carrito">Carrito</span></a></li>
+				</ul>
+
+			</div>
+			<!-- /.navbar-collapse -->
+			<div class="clearfix"></div>
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<!--fin del menu de navegacion-->
+
+	<!-- Cookies -->
+	<div class="container">
+		<div class="container col-md-12 cookies">
+			 <br>
+			<h4>POLITICA DE COOKIES</h4>
+             <br>
+			<p>Cookie es un fichero que se descarga en su ordenador al
+				acceder a determinadas páginas web. Las cookies permiten a una
+				página web, entre otras cosas, almacenar y recuperar información
+				sobre los hábitos de navegación de un usuario o de su equipo y,
+				dependiendo de la información que contengan y de la forma en que
+				utilice su equipo, pueden utilizarse para reconocer al usuario.. El
+				navegador del usuario memoriza cookies en el disco duro solamente
+				durante la sesión actual ocupando un espacio de memoria mínimo y no
+				perjudicando al ordenador. Las cookies no contienen ninguna clase de
+				información personal específica, y la mayoría de las mismas se
+				borran del disco duro al finalizar la sesión de navegador (las
+				denominadas cookies de sesión).</p>
+			<p>La mayoría de los navegadores aceptan como estándar a las
+				cookies y, con independencia de las mismas, permiten o impiden en
+				los ajustes de seguridad las cookies temporales o memorizadas.</p>
+			<br>
+
+			<h4>¿Qué tipos de cookies utiliza esta página web?</h4>
+
+			<p>Las cookies se pueden clasificar en diferentes categorías
+				dependiendo de la entidad que las gestione, el plazo de tiempo que
+				permanecen activas o según su finalidad. No obstante lo anterior, en
+				ocasiones es posible que una misma cookie pueda estar incluida en
+				más de una categoría. En la actualidad podemos distinguir los
+				siguientes tipos de cookies:</p>
+
+			<ul>
+				<li><strong>Cookies técnicas:</strong> Son aquéllas que
+					permiten al usuario la navegación a través de una página web,
+					plataforma o aplicación y la utilización de las diferentes opciones
+					o servicios que en ella existan como, por ejemplo, controlar el
+					tráfico y la comunicación de datos, identificar la sesión, acceder
+					a partes de acceso restringido, recordar los elementos que integran
+					un pedido, realizar el proceso de compra de un pedido, realizar la
+					solicitud de inscripción o participación en un evento, utilizar
+					elementos de seguridad durante la navegación, almacenar contenidos
+					para la difusión de videos o sonido o compartir contenidos a través
+					de redes sociales.</li>
+				<li><strong>Cookies de análisis:</strong> Son aquéllas que bien
+					tratadas por nosotros o por terceros, nos permiten cuantificar el
+					número de usuarios y así realizar la medición y análisis
+					estadístico de la utilización que hacen los usuarios del servicio
+					ofertado. Para ello se analiza su navegación en nuestra página web
+					con el fin de mejorar la oferta de productos o servicios que le
+					ofrecemos.</li>
+			</ul>
+			<br>
+			<p>
+				<strong>El usuario acepta expresamente, por la utilización
+					de este sitio, el tratamiento de la información recabada en la
+					forma y con los fines anteriormente mencionados.</strong> Y asimismo
+				reconoce conocer la posibilidad de rechazar el tratamiento de tales
+				datos o información rechazando el uso de Cookies mediante la
+				selección de la configuración apropiada a tal fin en su navegador.
+				Si bien esta opción de bloqueo de Cookies en su navegador puede no
+				permitirle el uso pleno de todas las funcionalidades del Website.
+			</p>
+
+			<p>Puede usted permitir, bloquear o eliminar las cookies
+				instaladas en su equipo mediante la configuración de las opciones
+				del navegador instalado en su ordenador</p>
+
+
+			<ul class="enlacesCookies">
+				<li><a
+					href="https://support.google.com/chrome/answer/95647?hl=es">Chrome</a></li>
+				<li><a
+					href="http://windows.microsoft.com/es-es/windows7/how-to-manage-cookies-in-internet-explorer-9">Explorer</a>
+				</li>
+				<li><a
+					href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias?redirectlocale=es&redirectslug=habilitar-y-deshabilitar-cookies-que-los-sitios-we">Firefox</a>
+				</li>
+				<li><a href="https://support.apple.com/kb/ph5042?locale=es_ES">Safari</a></li>
+			</ul>
+			<p>Si tiene dudas sobre esta política de cookies, puede contactar
+				con cookies@HandsMade.com</p>
+				 <br>
+		</div>
+	</div>
+
+
+	<!-- Fin de Cookies-->
+
+
+	<!--footer-->
+	<div class="footer">
+		<div class="ft-top">
+			<div class="container">
+				<div class="linksFooter col-xs-12 col-md-3">
+					<ul>
+						<li><a href="#" class="">Trabaja con nosotros</a></li>
+						<li><a href="nosotros.html" class="">Nosotros</a></li>
+						<li><a href="contacto.html" class="">Contacto</a></li>
+					</ul>
+				</div>
+				<div class="linksFooter col-xs-12 col-md-3">
+					<ul>
+						<li><a href="signup.html" class="">Registro</a></li>
+						<li><a href="politica.html" class="">Politica de
+								privacidad</a></li>
+						<li><a href="cookies.html" class="">Cookies</a></li>
+					</ul>
+				</div>
+				<div class="aceptamos col-xs-12 col-md-3">
+					<ul>
+						<li><img
+							src="https://static.wixstatic.com/media/cda177_66112d8828944365b8a0fb3f95e423a0.png/v1/fill/w_32,h_20,al_c,usm_0.66_1.00_0.01/cda177_66112d8828944365b8a0fb3f95e423a0.png" /></li>
+						<li><img
+							src="https://static.wixstatic.com/media/cda177_0292d75330eb4c46819ebd76e2b71edd.png/v1/fill/w_34,h_22,al_c,usm_0.66_1.00_0.01/cda177_0292d75330eb4c46819ebd76e2b71edd.png" /></li>
+						<li><img
+							src="https://static.wixstatic.com/media/cda177_ae6aa613f4e049c697544cc8c8375ea2.png/v1/fill/w_33,h_21,al_c,usm_0.66_1.00_0.01/cda177_ae6aa613f4e049c697544cc8c8375ea2.png" /></li>
+						<li><img
+							src="https://static.wixstatic.com/media/cda177_91a1dcd4c6d44674acf4a562b09838f6.png/v1/fill/w_35,h_22,al_c,usm_0.66_1.00_0.01/cda177_91a1dcd4c6d44674acf4a562b09838f6.png" /></li>
+					</ul>
+				</div>
+				<div class="social-media col-xs-12 col-md-3">
+					<ul>
+						<li><a target="_blank" href="https://www.facebook.com/"
+							class="ftfb"></a></li>
+						<li><a target="_blank" href="https://twitter.com/"
+							class="fttwt"></a></li>
+						<li><a target="_blank" href="https://www.instagram.com/"
+							class="ftinst"></a></li>
+						<li><a target="_blank"
+							href="https://accounts.google.com/ServiceLogin?" class="ftdrib"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="ft-bottom">
+			<div class="container">
+				<p>RubenRodriguez | YesicaRojas | NassimBoussaidi</p>
+			</div>
+		</div>
+
+		<!-- script para el triangulo que lleva al header -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+				 var defaults = {
+				 containerID: 'toTop', // fading element id
+				 containerHoverID: 'toTopHover', // fading element hover id
+				 scrollSpeed: 1200,
+				 easingType: 'linear'
+				 };
+				 */
+
+				$().UItoTop({
+					easingType : 'easeOutQuart'
+				});
+
+			});
+		</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;">
+			<span id="toTopHover" style="opacity: 1;"> </span>
+		</a>
+	</div>
+	<!--Fin del footer-->
+	<!-- Cookies -->
+	<div id="barraaceptacion" style="display: block;">
+		<div class="inner">
+			Solicitamos su permiso para obtener datos estadísticos de su navegación en esta web, en cumplimiento del Real
+			Decreto-ley 13/2012. Si continúa navegando consideramos que acepta el uso de cookies.
+			<a href="javascript:void(0);" class="ok" onclick="PonerCookie();"><b>OK</b></a> |
+			<a href="cookies.html" target="_blank" class="info">Más información</a>
+		</div>
+	</div>
+	<!-- Fin cookies -->
+</body>
+<!--body-->
+</html>

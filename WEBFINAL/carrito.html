@@ -1,11 +1,11 @@
 <!--
-Autor= Yesica Rojas, Ruben Rodriguez, Nassim Bousaidi
+Autor= Yesica Rojas, Ruben Rodriguez, Nassim El Boussaidi
 Fecha= 10.junio de 2016
 Licencia=  gp130
 Version= 1.0
 Descripcion= Página contacto que contiene el formulario
--->
-<!--
+
+
   Copyright (C) 2016 Yesica Rojas, Ruben Rodriguez, Nassim Bousaidi
 
   This program is free software: you can redistribute it and/or modify
@@ -20,8 +20,8 @@ Descripcion= Página contacto que contiene el formulario
 
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
--->
+*/-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -56,6 +56,7 @@ Descripcion= Página contacto que contiene el formulario
         <script type="text/javascript" src="js/easing.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
         <script type="text/javascript" src="js/carrito.js"></script>
+        <script type="text/javascript" src="js/pedido.js"></script>
         <script type="text/javascript" src="js/contador.js"></script>
         
 
@@ -102,19 +103,10 @@ Descripcion= Página contacto que contiene el formulario
                                                         </fieldset>
                                                         <div id="errorLogin" style="color: red;"></div>
                                                         <input id="login" value="Sign in" type="button" onclick="openSession()">
-                                                        <div class="or-grid">
-                                                            <p>OR</p>
-                                                        </div>
-                                                        <div class="social-sits">
-                                                            <div class="facebook-button">
-                                                                <a id="loginFace" href="#">Connect with Facebook</a>
-                                                            </div>
-
-                                                            <div class="button-bottom">
-                                                                <p>
-                                                                    New account? <a href="signup.html">Signup</a>
-                                                                </p>
-                                                            </div>
+                                                        <div class="button-bottom">
+                                                            <p>
+                                                                New account? <a href="signup.html">Signup</a>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -135,7 +127,7 @@ Descripcion= Página contacto que contiene el formulario
                             </div>
                             <div class="mini-cart col-xs-col-sm-2 col-md-1">
                                 <!-- Mini cart -->
-                                <a href="carrito.html" title="Go to cart →"> <span id="mini">3</span>
+                                <a href="carrito.html" title="Ir a Carrito"> <span id="mini">0</span>
                                 </a>
                                 <!-- End class="mini-cart" -->
                             </div>
@@ -267,7 +259,16 @@ Descripcion= Página contacto que contiene el formulario
             </a>
         </div>
         <!--Fin del footer-->
-
+        <!-- Cookies -->
+        <div id="barraaceptacion" style="display: block;">
+            <div class="inner">
+                Solicitamos su permiso para obtener datos estadísticos de su navegación en esta web, en cumplimiento del Real
+                Decreto-ley 13/2012. Si continúa navegando consideramos que acepta el uso de cookies.
+                <a href="javascript:void(0);" class="ok" onclick="PonerCookie();"><b>OK</b></a> |
+                <a href="cookies.html" target="_blank" class="info">Más información</a>
+            </div>
+        </div>
+        <!-- Fin cookies -->
     </body>
     <!--body-->
 </html>
