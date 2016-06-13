@@ -1,13 +1,13 @@
 <?php
 /**
- * Autor= Ruben Rodríguez Fernández
+ * Autor= Nassim EL Boussaidi
  * Fecha= 15-Abr-2016
  * Licencia= gpl30
  * Version= 1.0
  * Descripcion= cerrar la sesion de usuario
  * */
 /*
- * Copyright (C) 2016 Ruben
+ * Copyright (C) 2016 Nassim
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
