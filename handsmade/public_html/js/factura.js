@@ -106,7 +106,7 @@ function insertarFactura(){
 function borrarSession(){
      peticion_http = new XMLHttpRequest();
     if (peticion_http) {
-        peticion_http.open("POST", 'php/closeSession.php', true);
+        peticion_http.open("POST", 'php/vaciarCarrito.php', true);
         peticion_http.send();
     }
 }

@@ -52,7 +52,7 @@ function procesarMensaje() {
             var documentJSON = JSON.parse(peticion_http.responseText);
             var mensaje = documentJSON.mensaje;
             if (mensaje === 'si') {
-                window.location.replace("http://localhost/handsmade/public_html/factura.html");
+                window.location.replace("factura.html");
             }
         }
     }
