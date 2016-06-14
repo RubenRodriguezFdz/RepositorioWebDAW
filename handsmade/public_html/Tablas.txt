@@ -46,7 +46,7 @@ VALUES
 ('Estantería panal', 'hogar', 'madera', 24.99);
 
 CREATE TABLE pedidos (
-id_pedido INT(3) NOT NULL PRIMARY KEY AUTO_INCREMEN,
+id_pedido INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 id_user INT(3) NOT NULL,
 FOREIGN KEY (id_user) REFERENCES clientes(id_user)
 )DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
